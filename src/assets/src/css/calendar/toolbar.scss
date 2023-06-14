@@ -1,0 +1,105 @@
+
+.fc-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+
+.fc-toolbar.fc-header-toolbar {
+	margin-bottom: 1.5em
+}
+
+.fc-toolbar.fc-footer-toolbar {
+	margin-top: 1.5em
+}
+
+.fc-toolbar>*>:not(:first-child) {
+	margin-left: .75em !important;
+}
+
+.fc-toolbar h2 {
+	font-size: 1.75em;
+	margin: 0
+}
+
+.fc-toolbar .btn-group .btn-light {
+	color: $text-muted;
+	background: $calendar-toolbar-bg;
+	border: 1px solid $calendar-toolbar-border;
+	text-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.fc-toolbar .btn-group .btn-light:hover{
+	color: $text-muted !important;
+	background: $calendar-toolbar-bg !important;
+	border: 1px solid $calendar-toolbar-border !important;
+}
+
+.fc-toolbar .btn-group .btn-light:focus,
+.fc-toolbar .btn-group .btn-light:active,
+.fc-toolbar .btn-group .btn-light.active {
+	background: $blue !important;
+	color: $btn-color-white !important;
+	border: 1px solid $blue !important;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.fc-toolbar h2 {
+	font-size: 16px;
+	line-height: 30px;
+	text-transform: uppercase
+}
+
+.fc .fc-toolbar .btn {
+	text-transform: capitalize
+}
+
+.fc .fc-toolbar h2 {
+	font-size: 16px;
+	line-height: 30px;
+	text-transform: uppercase
+}
+
+.fc-button.btn-light, .fc-left .fc-today-button{
+	color: $calendar-btn-light-color ;
+	background-color: $calendar-btn-light-bg ;
+	border-color: $calendar-btn-light-border;
+}
+
+.fc-button.btn-light:disabled, .fc-left .fc-today-button:disabled {
+	color: $calendar-btn-disabled-color !important;
+	background-color: $calendar-btn-disabled-bg !important;
+	border-color: $calendar-btn-disabled-border !important;
+}
+
+[dir=rtl] .fc-toolbar>*>:not(:first-child) {
+	margin-left: .75em
+}
+
+@media (max-width:767.98px) {
+	.fc .fc-toolbar .fc-center,
+	.fc .fc-toolbar .fc-left,
+	.fc .fc-toolbar .fc-right {
+		float: none;
+		display: block;
+		text-align: center;
+		clear: both;
+		margin: 10px 0
+	}
+	.fc .fc-toolbar>*>* {
+		float: none
+	}
+	.fc .fc-toolbar .fc-today-button {
+		display: none
+	}
+}
+
+@media (max-width:575.98px) {
+	.fc .fc-toolbar {
+		display: block
+	}
+}

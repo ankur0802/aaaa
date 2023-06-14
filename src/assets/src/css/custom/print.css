@@ -1,0 +1,42 @@
+@media print {
+
+    .w-p-50{width: 50%;}
+    .print-text-end{text-align: right;}
+
+    .print-mx-w-100{
+           max-width: 100% !important;
+       }
+    .print-w-100{
+           width: 100% !important;
+       }
+    .print-px-0{
+           padding-left: 0 !important;
+           padding-right: 0 !important;
+       }
+
+       .print-pt-0{padding-top: 0 !important;}    
+
+       table.print-table tr th.print-th-px-125 {
+           min-width: 125px;
+       }
+  
+       .print-color-adjust{
+        -webkit-print-color-adjust: exact;
+       }
+       .print-p-0{
+        padding:0 !important;
+    }
+    .content-wrapper {
+        margin:0 !important;
+    }
+    .print-mt-2{
+        margin-top:0.5rem !important;
+    }
+    .mt-print-0{
+        margin-top:0 !important;
+    }
+    .print-table table tr td{
+        padding: 0.5rem 0.85rem;
+    }
+
+}

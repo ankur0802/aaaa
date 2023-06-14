@@ -1,0 +1,98 @@
+
+
+/* This CSS file is unnecessary if you are not using vertical buttons functionality */
+.bootstrap-touchspin {
+	.input-group-btn-vertical {
+		position: absolute;
+		right: 0;
+		height: 100%;
+		z-index: 9;
+		>.btn {
+			position: absolute;
+			right: 0;
+			height: 50%;
+			padding: 0;
+			width: 2em;
+			text-align: center;
+			line-height: 1;
+		}
+		.bootstrap-touchspin-up {
+			border-radius: 0 4px 0 0;
+			top: 0;
+		}
+		.bootstrap-touchspin-down {
+			border-radius: 0 0 4px 0;
+			bottom: 0;
+		}
+	}
+	.input-group-text {
+		height: 100%;
+		border: 1px solid $touchspin-border-color;
+		border-radius: 0;
+		background-color: $touchspin-bg;
+		&:hover{
+			border: 1px solid $touchspin-border-color!important;
+			background-color: $touchspin-bg!important;
+		}
+		&:focus{
+			border: 1px solid $touchspin-border-color!important;
+			background-color: $touchspin-bg!important;
+			box-shadow: none !important;
+		}
+		&:active{
+			border: 1px solid $touchspin-border-color!important;
+			background-color: $touchspin-bg!important;
+			box-shadow: none !important;
+		}
+	}
+	.btn-light {
+		border: 1px solid $touchspin-border-color;
+		background: $touchspin-bg;
+		color: $touchspin-color;
+		&:hover{
+			border: 1px solid $touchspin-border-color!important;
+			background-color: $touchspin-bg!important;
+		}
+		&:focus{
+			border: 1px solid $touchspin-border-color!important;
+			background-color: $touchspin-bg!important;
+			box-shadow: none !important;
+		}
+		&:active{
+			border: 1px solid $touchspin-border-color!important;
+			background-color: $touchspin-bg!important;
+			box-shadow: none !important;
+		}
+	}
+	input[name="vertical-icons"] {
+		margin-right: 28px;
+	}
+	input[name="touchspin-vertical"] {
+		margin-right: 28px;
+	}
+}
+.input-group {
+	.btn.bootstrap-touchspin-down {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.btn.bootstrap-touchspin-up {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	.input-group-btn-vertical {
+		.btn.bootstrap-touchspin-down {
+			border-bottom-right-radius: 4px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.bootstrap-touchspin {
+		input[name="vertical-icons"] {
+			margin-right: 26px;
+		}
+		input[name="touchspin-vertical"] {
+			margin-right: 26px;
+		}
+	}
+}

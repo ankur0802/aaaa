@@ -1,0 +1,537 @@
+
+// Fonts
+
+$font-family-base:                                   "Poppins", sans-serif !default; // bootstrap-variable
+$font-size-base:                                     1rem !default; // bootstrap-variable
+$font-size-root:                                     13px; // bootstrap-variable
+$font-weight-medium:                                 500;
+$font-weight-semibold:                               600;
+
+// Bootstrap font size variables
+
+$h1-font-size:                                       $font-size-base * 1.75; // bootstrap-variable
+$h2-font-size:                                       $font-size-base * 1.5; // bootstrap-variable
+$h3-font-size:                                       $font-size-base * 1.35; // bootstrap-variable
+$h4-font-size:                                       $font-size-base * 1.25; // bootstrap-variable
+$h5-font-size:                                       $font-size-base * 1.15; // bootstrap-variable
+$h6-font-size:                                       $font-size-base * 1.075; // bootstrap-variable
+
+// Bootstrap color variables
+
+$body-color:                                       #1D1F2C !default; // bootstrap-variable
+$dark:                                             #1E1E2D !default; // bootstrap-variable
+$light:                                            #F3F6F9 !default; // bootstrap-variable
+$white:                                            #FFFFFF !default; // bootstrap-variable
+$blue:                                             #3699FF !default; // bootstrap-variable
+$green:                                            #50D1C5 !default; // bootstrap-variable
+$info:                                             #0dcaf0 !default; // bootstrap-variable
+$text-muted:                                       #b5b5c3 !default; // bootstrap-variable
+$red-bg:                                           #ff0000 !default; 
+
+$black:                                            #000000 !default; // custom-variable
+$black-100:                                        #111111 !default; // custom-variable
+$black-200:                                        #222222 !default; // custom-variable
+$black-300:                                        #333333 !default; // custom-variable
+$black-400:                                        #444444 !default; // custom-variable
+$black-500:                                        #555555 !default; // custom-variable
+$black-600:                                        #666666 !default; // custom-variable
+$black-700:                                        #777777 !default; // custom-variable
+$black-800:                                        #888888 !default; // custom-variable
+$black-900:                                        #999999 !default; // custom-variable
+
+// custom color variants
+
+$dark-gray:                                        #354254 !default; // custom-variable
+$dark-gray-100:                                    #1a1a27 !default; // custom-variable
+$dark-gray-200:                                    #2D3852 !default; // custom-variable
+$dark-gray-300:                                    #5e6278 !default; // custom-variable
+$dark-gray-400:                                    #141619 !default; // custom-variable
+$dark-gray-500:                                    #212529 !default; // custom-variable
+$dark-gray-600:                                    #181C32 !default; // custom-variable
+
+$text-muted-color:                                 #b5b5c3 !default; // custom-variable
+$dark-txt:                                         #1d1f2c !default ; // custom-variable
+
+$radio-secondary:                                  #D1D3E0 !default; // custom-variable
+$radio-info:                                       #C9F7F5 !default; // custom-variable
+$radio-warning:                                    #FFF4DE !default; // custom-variable
+$radio-success:                                    #d9ffeb !default; // custom-variable
+$radio-danger:                                     #FFE2E5 !default; // custom-variable
+
+$heavy-blue:                                       #0D6EFD !default; // custom-variable
+$heavy-blue-100:                                   #0A58CA !default; // custom-variable
+$heavy-blue-200:                                   #0C63E4 !default; // custom-variable
+$heavy-blue-300:                                   #2F8CED !default; // custom-variable
+$heavy-blue-400:                                   #084298 !default; // custom-variable
+$heavy-blue-500:                                   #06357a !default; // custom-variable
+$heavy-blue-600:                                   #06c !default; // custom-variable
+$heavy-blue-700:                                   #3788d8 !default; // custom-variable
+
+$light-blue:                                       #2984e2 !default; // custom-variable
+$light-100:                                        #B5B5C3 !default; // custom-variable
+$light-200:                                        #B7B7B7 !default; // custom-variable
+$light-300:                                        #D6E8F9 !default; // custom-variable
+$light-400:                                        #E1F0FF !default; // custom-variable
+$light-500:                                        #E4E6EF !default; // custom-variable
+$light-600:                                        #E7F1FF !default; // custom-variable
+$light-700:                                        #EDF1F4 !default; // custom-variable
+$light-800:                                        #F1F1F1 !default; // custom-variable
+$light-900:                                        #E9EDF1 !default; // custom-variable
+$light-1000:                                       #EEF0F8 !default; // custom-variable
+$light-1100:                                       #dedede !default; // custom-variable
+
+$grayscale:                                        #AAAAAA!default; // custom-variable
+$grayscale-100:                                    #B6D4FE !default; // custom-variable
+$grayscale-200:                                    #CFE2FF !default; // custom-variable
+$grayscale-300:                                    #D1E7DD !default; // custom-variable
+$grayscale-400:                                    #BADBCC !default; // custom-variable
+$grayscale-500:                                    #A1A5B7 !default; // custom-variable
+$grayscale-600:                                    #697a8d !default; // custom-variable
+$grayscale-700:                                    #233446 !default; // custom-variable
+$grayscale-800:                                    #d3d3d4 !default; // custom-variable
+$grayscale-900:                                    #fff3cd !default; // custom-variable
+$grayscale-1000:                                   #CCC !default; // custom-variable
+
+$success-100:                                      #146c43 !default; // custom-variable
+$success-200:                                      #13653f !default; // custom-variable
+$success-300:                                      #0f5132 !default; // custom-variable
+$success-400:                                      #198754 !default; // custom-variable
+$success-500:                                      #055160 !default; // custom-variable
+$success-600:                                      #258754 !default; // custom-variable
+$success-light:                                    #71dd37 !default; // custom-variable
+$success-light-100:                                #20b426 !default; // custom-variable
+$success-light-200:                                #8fdf82 !default; // custom-variable
+$success-light-300:                                #4FCA31 !default; // custom-variable
+
+$pink:                                             #ee22fa !default; // custom-variable
+$pink-100:                                         #a804b2 !default; // custom-variable
+$cyan:                                             #1BC5BD !default; // custom-variable
+$danger-100:                                       #DC3545 !default; // custom-variable
+$danger-200:                                       #F64E60 !default; // custom-variable
+$danger-300:                                       #ff3e1d !default; // custom-variable
+$danger-400:                                       #d33333 !default; // custom-variable
+$danger-600:                                       #842029 !default; // custom-variable
+$danger-light-100:                                 #f8d7da !default; // custom-variable
+$warning-100:                                      #FFA800 !default; // custom-variable
+$warning-200:                                      #FFC107 !default; // custom-variable
+$warning-300:                                      #664d03 !default; // custom-variable
+$warning-400:                                      #ffab00 !default; // custom-variable
+$info-100:                                         #03c3ec !default; // custom-variable
+$info-200:                                         #bce8f1 !default; // custom-variable
+$info-300:                                         #cff4fc !default; // custom-variable
+$code-color:                                       #d63384 !default; // custom-variable
+
+// quill
+
+$ql-bg-red:                                        #e60000 !default; // custom-variable
+$ql-bg-orange:                                     #f90 !default; // custom-variable
+$ql-bg-yellow:                                     #ff0 !default; // custom-variable
+$ql-bg-green:                                      #008a00 !default; // custom-variable
+$ql-bg-purple:                                     #93f !default; // custom-variable
+$tree-bg-purple:                                   #696cff !default; // custom-variable
+$tree-view-border:                                 $light-800 !default; // custom-variable
+
+// sidebar + Header + wrapper variables
+
+$sidebar-header-bg:                                #0C1427 !default; // custom-variable
+$header-bg:                                        $white !default; // custom-variable
+$header-shadow:                                    0px 10px 30px 0px rgb(82 63 105 / 5%) !default; // custom-variable
+$sidebar-bg:                                       $sidebar-header-bg; // custom-variable
+$sidebar-border:                                   #1A2747 !default; // custom-variable
+$sidebar-border-right:                             $light-600 !default; // custom-variable
+$active-nav-item:                                  #2f80ed !default; // custom-variable
+$active-nav-link:                                  $blue !default; // custom-variable
+$toggler-bg:                                       $dark-gray-200 !default; // custom-variable
+$sidebar-label:                                    #8F939A !default; // custom-variable
+$wrapper-bg:                                       #F3F5F7 !default; // custom-variable
+$nav-link:                                         #959fb7 !default; // custom-variable
+$side-nav-link:                                    rgb(143, 147, 154) !default; // custom-variable
+$nav-link-active:                                  #17a2ad !default; // custom-variable
+$scrollbar-bg:                                     #eff2f5 !default; // custom-variable
+$scrollbar-thumb:                                  #3b3b64 !default; // custom-variable
+$dropdown-profile:                                 #5b6a8b !default; // custom-variable
+$dropdown-profile-hover:                           $heavy-blue !default; // custom-variable
+
+// editors
+
+$toolbar-bg-color:                                 #f5f5f5 !default; // custom-variable
+$toolbar-btn-bg:                                   #fff !default; // custom-variable
+$toolbar-btn-border:                               #dae0e5 !default; // custom-variable
+$editor-frame-border:                              rgba(0, 0, 0, .2) !default; // custom-variable
+$editor-btn-hover:                                 #ebebeb !default; // custom-variable
+
+// custom-badges
+
+$bdage-light-danger:                               #FFE2E5 !default; // custom-variable
+$bdage-light-success:                              #d1e7dd !default; // custom-variable
+$bdage-light-warning:                              #FFF4DE !default; // custom-variable
+$bdage-light-info:                                 #C9F7F5 !default; // custom-variable
+$bdage-light-primary:                              #E1F0FF !default; // custom-variable
+$bdage-light-secondary:                            #e2e3e5 !default; // custom-variable
+$badge-success-text:                                 $success-400 !default; // custom-variable
+$badge-primary-text:                               #3699FF !default; // custom-variable
+$badge-secondary-text:                             #41464b !default; // custom-variable
+$bdage-item-light-bg:                              #fefefe !default; // custom-variable
+$bdage-item-dark-bg:                               #d3d3d4 !default; // custom-variable
+$list-secondary-color:                             #41464b !default; // custom-variable
+$list-secondary-bg:                                #e2e3e5 !default; // custom-variable
+
+// dropdowns
+
+$dropdown-border-width:                              0; // bootstrap-variable
+$dropdown-box-shadow:                                0px 15px 50px 0px rgb(82 63 105 / 15%) !default; // bootstrap-variable
+$dropdown-link-hover-color:                          $blue; // bootstrap-variable
+$dropdown-link-hover-bg:                             $light; // bootstrap-variable
+$dropdown-min-width:                                 225px !default; // bootstrap-variable
+$dropdown-item-padding-y:                            0.5rem !default; // bootstrap-variable
+$caret-spacing:                                      0.260em !default; // bootstrap-variable
+$caret-width:                                        4px !default; // bootstrap-variable
+
+// Calendars
+
+$calendar-border-color:                              $light;
+$calendar-toolbar-bg:                                transparent;
+$calendar-toolbar-border:                            $light-1000;
+$calendar-btn-disabled-bg:                           $light;
+$calendar-btn-disabled-color:                        $black;
+$calendar-btn-disabled-border:                       $light;
+$calendar-btn-light-color:                           $blue;
+$calendar-btn-light-bg:                              $light-400;
+$calendar-btn-light-border:                          $light-400;
+$fullcalendar-border-color:                        #eff2f7;
+$fullcalendar-header-color:                        #3f4254;
+$fullcalendar-day-nmb:                             #3f4254;
+$fullcalendar-event-bg:                            #cfe2ff;
+$fullcalendar-event-color:                           $blue;
+$fullcalendar-event-border:                        #cfe2ff;
+$theme-border-clr:                                 #373d40;
+
+
+//  flatpicker
+
+$flatpicker-bg:                                      $white;
+$flatpicker-days:                                    $white;
+$flatpicker-time-bg:                                 $white;
+$flatpicker-divider-sahdow:                        #d9dee3;
+$flatpicker-weeks-bg:                              #f6f7f8;
+
+// navbar
+
+$tooltip-border-radius:                              0.25rem !default; // bootstrap-variable     
+$tooltip-color:                                    #FFFFFF !default; // bootstrap-variable                       
+
+// navbar
+
+$navbar-toggler-font-size:                           1.075rem !default; // bootstrap-variable
+
+// nav and tabs
+
+$nav-pills-border-radius:                            0.25rem !default; // bootstrap-variable
+$nav-link-color:                                     $dark-gray; // bootstrap-variable
+$nav-tabs-link-active-color:                         $blue; // bootstrap-variable
+
+// toasts
+
+$toast-box-shadow:                                   0 0.5rem 1rem rgb(0 0 0 / 15%)  !default; // bootstrap-variable
+
+// tagify variables
+
+$tagify-dd-color-primary:                          rgb(53, 149, 246);
+$tagify-dd-bg-color:                                 $white;
+$tags-border-color:                                #E4E6EF;
+$tags-hover-border-color:                          #CCC;
+$tags-focus-border-color:                          #3595f6;
+$tag-bg:                                           #E5E5E5;
+$tag-hover:                                        #D3E2E2;
+$tag-text-color:                                     $black;
+$tag-text-color--edit:                               $black;
+$tag-pad:                                            0.3em 0.5em;
+$tag-inset-shadow-size:                              1.1em;
+$tag-invalid-color:                                #3699FF;
+$tag-invalid-bg:                                   rgba(255, 62, 29, 0.5);
+$tag-remove-bg:                                    rgba(255, 62, 29, 0.3);
+$tag-remove-btn-color:                               $black;
+$tag-remove-btn-bg:                                  none;
+$tag-remove-btn-bg--hover:                         #ff2804;
+$input-color:                                        inherit;
+$tag--min-width:                                     1ch;
+$tag--max-width:                                     auto;
+$tag-hide-transition:                                0.3s;
+$placeholder-color:                                rgba(0, 0, 0, 0.4);
+$placeholder-color-focus:                          rgba(0, 0, 0, 0.25);
+$loader-size:                                        0.8em;
+$tag-opacity:                                        0.5; 
+$tag-editable-color:                                 $black;
+$tag-editable-bg:                                    0 0 0 2px #d3e2e2 inset;
+$tagify-panel-bg:                                    $white;
+
+// select2
+
+$slider-bg:                                        #e1e4e9 !default; // custom-variable
+$select2-bg:                                       #eceef1 !default; // custom-variable
+$select2-field-bg:                                   $white !default; // custom-variable
+$select2-tag-bg:                                     $light-1000 !default; // custom-variable
+$select2-color:                                    #3699FF !default; // custom-variable
+$select2-tag-bg-hover:                             #d7ebff !default; // custom-variable
+$select2-tag-color-hover:                          #0083fd !default; // custom-variable
+$select2-multi-bg:                                 rgba(35,52,70,.08) !default; // custom-variable
+$select2-multi-color:                                $grayscale-700 !default; // custom-variable
+$select2-hover-bg:                                 rgba(35,52,70,.16) !default; // custom-variable
+$select2-drop-panel-bg:                              $white !default; // custom-variable
+$select2-option-true:                              #eef0f8 !default;
+$select2-option-heighlighted:                        rgba(67,89,113,.04) !default;
+$select2-input-bg:                                   $white;
+$select2-input-border:                             #d9dee3;
+$select2-option-true-color:                          $blue;
+$select2-option-heighlighted-color:                  $grayscale-600;
+
+// Buttons
+
+$btn-padding-y:                                      0.75rem !default; // bootstrap-variable
+$btn-padding-x:                                      1.5rem !default; // bootstrap-variable
+$btn-font-size:                                      1rem !default; // bootstrap-variable
+$btn-padding-y-sm:                                   0.55rem !default; // bootstrap-variable
+$btn-padding-x-sm:                                   1.25rem !default; // bootstrap-variable
+$btn-font-weight:                                    500 !default; // bootstrap-variable
+$btn-padding-y:                                      0.75rem !default; // bootstrap-variable
+$btn-padding-x:                                      1.5rem !default; // bootstrap-variable
+$btn-font-size-sm:                                   0.925rem !default; // bootstrap-variable
+$btn-padding-y-lg:                                   0.825rem !default; // bootstrap-variable
+$btn-padding-x-lg:                                   1.75rem !default; // bootstrap-variable
+$btn-font-size-lg:                                   1.15rem !default; // bootstrap-variable
+$btn-border-radius:                                  0.475rem !default; // bootstrap-variable
+$btn-border-radius-sm:                               0.475rem !default; // bootstrap-variable
+$btn-border-radius-lg:                               0.475rem !default; // bootstrap-variable
+$btn-border-radius:                                  0.475rem !default; // bootstrap-variable
+$btn-light-bg:                                       $light-400; // bootstrap-variable
+$btn-light-hover-bg:                                 $light-300; // bootstrap-variable 
+$btn-light-color:                                    $blue !default; // bootstrap-variable
+$btn-light-border:                                   $light-400; // bootstrap-variable
+$btn-success-background:                             $success-100; // bootstrap-variable
+$btn-success-border:                                 $success-200; // bootstrap-variable 
+$btn-primary-active-bg:                              $heavy-blue-100; // bootstrap-variable
+$btn-primary-hover-bg:                               $heavy-blue-300; // bootstrap-variable
+$btn-focus-box-shadow:                               none; // bootstrap-variable
+$btn-outline-checked:                                $light !default;
+$btn-outline-hover:                                  $light !default;
+$btn-outline-dark-border:                          #272731 !default;
+$btn-outline-dark-border-hover:                    #272731 !default;
+$btn-outline-dark-color:                           #272731 !default;
+$btn-outline-dark-color-hover:                     #fff !default;
+$btn-outline-dark-hover-bg:                        #1e1e2d !default;
+$btn-outline-dark-focus-bg:                        #1e1e2d !default;
+$btn-dark-color:                                   #fff !default;
+$btn-dark-bg:                                      #212529 !default;
+$btn-dark-hover-bg:                                #1c1f23 !default;
+$btn-outline-light-border:                          #f8f9fa !default;
+$btn-outline-light-border-hover:                    #f8f9fa !default;
+$btn-outline-light-color:                           #f8f9fa!default;
+$btn-outline-light-color-hover:                     #272731 !default;
+$btn-outline-light-hover-bg:                        #f8f9fa !default;
+$btn-outline-light-focus-bg:                        #f8f9fa !default;
+$btn-outline-light-shadow:                            0 0 0 0.25rem rgb(248 249 250 / 50%) !default;
+$btn-color-white:                                   #fff !default;
+
+// Accordion
+
+$accordion-button-padding-y:                         1.5rem !default; // bootstrap-variable
+$accordion-button-padding-x:                         1.5rem !default; // bootstrap-variable
+$accordion-button-active-color:                      $heavy-blue-200; // bootstrap-variable
+$accordion-button-active-bg:                         $light-600; // bootstrap-variable
+
+// Alerts
+
+$alert-margin-bottom:                                1.5rem !default; // bootstrap-variable
+$alert-border-radius:                                0.25rem !default; // bootstrap-variable
+
+// Breadcrumbs
+
+$breadcrumb-active-color:                            $dark-gray-100; // bootstrap-variable
+$breadcrumb-divider-color:                           $dark-gray-100; // bootstrap-variable
+
+// Shadow
+
+$box-shadow:                                         0 0.5rem 1rem rgb(0 0 0 / 5%) !default; // bootstrap-variable
+$box-shadow-sm:                                      0 0.125rem 0.25rem rgb(0 0 0 / 8%) !default; // bootstrap-variable
+
+// progess-bar
+
+$progress-border-radius:                             0.25rem !default; // bootstrap-variable
+
+// list-group
+
+$list-group-border-radius:                           0.25rem !default; // bootstrap-variable
+
+//modal, offcanvas
+
+$zindex-offcanvas:                                   1070 !default; // bootstrap-variable
+$zindex-modal:                                       1080 !default; // bootstrap-variable
+$zindex-modal-backdrop:                              1050 !default; // bootstrap-variable
+
+// pagination
+
+$pagination-active-bg:                               $heavy-blue; // bootstrap-variable
+$pagination-active-border-color:                     $heavy-blue; // bootstrap-variable
+$pagination-color:                                   $heavy-blue; // bootstrap-variable
+$pagination-bg:                                      #fff;
+$pagination-link:                                    #f1faff;
+
+// link & colors
+
+$link-decoration:                                    none !default; // bootstrap-variable
+$link-color:                                         $blue; // bootstrap-variable
+$text-muted:                                         $light-100; // bootstrap-variable
+
+// borders
+
+$border-color:                                       $light-800; // bootstrap-variable
+$border-radius:                                      0.5rem !default; // bootstrap-variable
+
+// badges
+
+$badge-font-weight:                                  600 !default; // bootstrap-variable
+$badge-border-radius:                                0.25rem !default; // bootstrap-variable
+$badge-font-size:                                    0.85em !default; // bootstrap-variable
+
+// cards
+
+$card-border-width:                                  0px !default; // bootstrap-variable
+$card-border-radius:                                 0.475rem; // bootstrap-variable
+$card-spacer-y:                                      2rem !default; // bootstrap-variable
+$card-spacer-x:                                      2rem !default; // bootstrap-variable
+$card-cap-padding-x:                                 $card-spacer-x / 2 !default; // bootstrap-variable
+$card-cap-padding-y:                                 $card-spacer-y / 2 !default; // bootstrap-variable
+$card-cap-bg:                                      rgba(0,0,0,.03) !default; // bootstrap-variable
+$card-footer-bg:                                     $white !default; // bootstrap-variable
+$card-footer-border-top:                             0px !default; // bootstrap-variable
+$header-border-bottom:                               transparent !default;
+
+$pricing-tab-bg:                                     $white !default;
+$pricing-tab-border-color:                           $white !default;
+
+// table
+
+$table-cell-padding-y:                               1.25rem !default; // bootstrap-variable
+$table-cell-padding-x:                               0.85rem !default; // bootstrap-variable
+$table-th-font-weight:                               400 !default; // bootstrap-variable
+$table-caption-color:                                $dark-gray-100; // bootstrap-variable
+$table-cell-vertical-align:                          middle; // bootstrap-variable
+$table-group-separator-color:                      #d9dee3; // bootstrap-variable
+$table-border-color:                               #d9dee3 !default; // bootstrap-variable
+$table-border-top:                                 #eff2f7 !default;
+$table-th:                                           $black !default;
+$table-dark-bg:                                      $black !default;
+$table-dark-border-color:                          #abadaf !default;
+$table-dark-color:                                   $white !default;
+
+// spacer
+
+$spacer:                                             1rem !default;
+
+// forms
+
+$input-padding-y:                                    0.7rem !default;
+$input-padding-x:                                    1.25rem !default;
+$input-padding-y-lg:                                 0.5rem !default;
+$input-padding-x-lg:                                 1rem !default;
+$input-padding-y-sm:                                 0.25rem !default;
+$input-padding-x-sm:                                 0.5rem !default;
+$input-group-addon-padding-y:                        0.375rem;
+$input-group-addon-padding-x:                        0.75rem;
+$form-select-padding-y:                              0.7rem;
+$form-select-padding-x:                              1.15rem;
+$form-select-indicator-padding:                      5rem;
+$input-box-shadow:                                   none;
+$input-focus-box-shadow:                             none;
+$form-select-focus-box-shadow:                       none;
+$form-check-input-focus-box-shadow:                  none;
+$input-font-size:                                    1rem !default;
+$input-font-size-sm:                                 0.925rem;
+$form-label-font-size:                               1.05rem;
+$form-text-font-size:                                0.925rem;
+$form-select-font-size:                              1.1rem;
+$input-font-size-lg:                                 1.25rem;
+$form-label-font-weight:                             400;
+$input-border-radius:                                0.475rem;
+$form-select-border-radius:                          0.475rem;
+$form-check-input-border-radius:                     0.42rem !default;
+$input-border-radius-lg:                             0.475rem;
+$input-border-color:                                 $light-500;
+$input-focus-border-color:                           $blue;
+$form-text-color:                                    $dark-gray-100;
+$input-placeholder-color:                            $grayscale-500;
+$form-select-color:                                  $dark;
+$form-select-focus-border-color:                     $blue;
+$form-range-track-bg:                                $light-800;
+$input-disabled-bg:                                  $light;
+$form-check-input-bg:                                $light-700;
+$form-text-margin-top:                               0.25rem;
+$form-select-bg-position:                            right 0.75rem center;
+$form-check-input-width:                             1.5em !default;
+$form-check-input-border:                            1px solid transparent;
+$field-readonly:                                     $white;
+$form-control-solid-color:                           $light !default;
+$custom-file-bg:                                     $form-control-solid-color !default;
+$custom-file-border-right:                           $light-500;
+$custom-file-color:                                  #92929f; 
+$range-handle-border:                                $white;
+
+// checkbox
+
+$form-switch-width:                                  3.5em !default;
+$form-switch-border-radius:                          2em !default;
+$form-check-input-focus-border:                      0 !default;
+
+//  Charts
+
+$chart-canvas-bg:                                    $white;
+
+// dropzone
+
+$dropzone-border-color:                              $table-border-color;
+
+// Touchspin
+
+$touchspin-border-color:                           #e9ecef;
+$touchspin-bg:                                     #f4f5f7;
+$touchspin-color:                                  #272727;
+
+// Gantt Chart
+
+$gantt-header-bg:                                    $white;
+$gantt-header-stroke:                              #dedede;
+$gantt-row-fill:                                     $white;                               
+$gantt-row-stroke:                                 #f7f5f5;
+$gantt-header-text:                                  12px;    
+$gantt-arrow-stroke:                               #d7d6d6;      
+$bar-label-font-size:                                12px;     
+
+// Kanban-chart
+
+$kanban-drag-item-bg:                                $white;
+$kanban-drag-item-border-color:                      transparent;
+
+// prism code variables
+
+$code-color:                                       #d63384;
+$code-text-shadow:                                   $white;
+$code-font-size:                                     16px !default; // bootstarp-variable
+$highlight-code-bg:                                #0b1427;
+
+// svg
+
+$svg-color:                                          $black !default;
+
+// <hr>
+
+$hr-color:                                           $light-200;
+
+// container widths
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px
+) !default;

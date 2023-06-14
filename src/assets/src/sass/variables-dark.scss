@@ -1,0 +1,611 @@
+
+
+
+
+// Fonts
+
+$font-family-base:                                   "Poppins", sans-serif !default; // bootstrap-variable
+$font-size-base:                                     1rem !default; // bootstrap-variable
+$font-size-root:                                     13px; // bootstrap-variable
+$font-weight-medium:                                 500;
+$font-weight-semibold:                               600;
+
+// Bootstrap font size variables
+
+$h1-font-size:                                       $font-size-base * 1.75; // bootstrap-variable
+$h2-font-size:                                       $font-size-base * 1.5; // bootstrap-variable
+$h3-font-size:                                       $font-size-base * 1.35; // bootstrap-variable
+$h4-font-size:                                       $font-size-base * 1.25; // bootstrap-variable
+$h5-font-size:                                       $font-size-base * 1.15; // bootstrap-variable
+$h6-font-size:                                       $font-size-base * 1.075; // bootstrap-variable
+
+// Bootstrap color variables
+$body-color:                                       rgba(255,255,255,0.8) !default; // bootstrap-variable
+$body-bg:                                          #0b1428 !default; // bootstrap-variable
+$dark:                                             #222 !default; // bootstrap-variable
+$light:                                            #0b1427 !default; // bootstrap-variable
+$white:                                            #0d1932 !default; // bootstrap-variable
+$blue:                                             #3699FF !default; // bootstrap-variable
+$green:                                            #50D1C5 !default; // bootstrap-variable
+$info:                                             #0dcaf0 !default; // bootstrap-variable
+$text-muted:                                       #b5b5c3 !default; // bootstrap-variable
+$red-bg:                                           #ff0000 !default; 
+$success:                                          #3dbb76 !default; // bootstrap-variable                                        
+
+$black:                                            #000000 !default; // custom-variable
+$black-100:                                        #111111 !default; // custom-variable
+$black-200:                                        #222222 !default; // custom-variable
+$black-300:                                        #333333 !default; // custom-variable
+$black-400:                                        #444444 !default; // custom-variable
+$black-500:                                        #555555 !default; // custom-variable
+$black-600:                                        #666666 !default; // custom-variable
+$black-700:                                        #777777 !default; // custom-variable
+$black-800:                                        #888888 !default; // custom-variable
+$black-900:                                        #999999 !default; // custom-variable
+
+// custom color variants
+
+$dark-gray:                                        #354254 !default; // custom-variable
+$dark-gray-100:                                    #1a1a27 !default; // custom-variable
+$dark-gray-200:                                    #2D3852 !default; // custom-variable
+$dark-gray-300:                                    #5e6278 !default; // custom-variable
+$dark-gray-400:                                    #141619 !default; // custom-variable
+$dark-gray-500:                                    #212529 !default; // custom-variable
+$dark-gray-600:                                    #181C32 !default; // custom-variable
+
+$text-muted-color:                                 #ffffff !important; // custom-variable
+$dark-txt:                                         #bdbdbd !default ; // custom-variable
+
+$radio-secondary:                                  #D1D3E0 !default; // custom-variable
+$radio-info:                                       #C9F7F5 !default; // custom-variable
+$radio-warning:                                    #FFF4DE !default; // custom-variable
+$radio-success:                                    #d9ffeb !default; // custom-variable
+$radio-danger:                                     #FFE2E5 !default; // custom-variable
+
+
+$heavy-blue:                                       #0D6EFD !default; // custom-variable
+$heavy-blue-100:                                   #0A58CA !default; // custom-variable
+$heavy-blue-200:                                   #0C63E4 !default; // custom-variable
+$heavy-blue-300:                                   #2F8CED !default; // custom-variable
+$heavy-blue-400:                                   #084298 !default; // custom-variable
+$heavy-blue-500:                                   #06357a !default; // custom-variable
+$heavy-blue-600:                                   #06c !default; // custom-variable
+$heavy-blue-700:                                   #3788d8 !default; // custom-variable
+
+$light-blue:                                       #2984e2 !default; // custom-variable
+$light-100:                                        #B5B5C3 !default; // custom-variable
+$light-200:                                        #B7B7B7 !default; // custom-variable
+$light-300:                                        #D6E8F9 !default; // custom-variable
+$light-400:                                        #E1F0FF !default; // custom-variable
+$light-500:                                        #E4E6EF !default; // custom-variable
+$light-600:                                        #E7F1FF !default; // custom-variable
+$light-700:                                        #EDF1F4 !default; // custom-variable
+$light-800:                                        #F1F1F1 !default; // custom-variable
+$light-900:                                        #E9EDF1 !default; // custom-variable
+$light-1000:                                       #EEF0F8 !default; // custom-variable
+$light-1100:                                       #dedede !default; // custom-variable
+
+$grayscale:                                        #AAAAAA!default; // custom-variable
+$grayscale-100:                                    #B6D4FE !default; // custom-variable
+$grayscale-200:                                    #CFE2FF !default; // custom-variable
+$grayscale-300:                                    #D1E7DD !default; // custom-variable
+$grayscale-400:                                    #BADBCC !default; // custom-variable
+$grayscale-500:                                    #A1A5B7 !default; // custom-variable
+$grayscale-600:                                    #697a8d !default; // custom-variable
+$grayscale-700:                                    #233446 !default; // custom-variable
+$grayscale-800:                                    #d3d3d4 !default; // custom-variable
+$grayscale-900:                                    #fff3cd !default; // custom-variable
+$grayscale-1000:                                   #CCC !default; // custom-variable
+
+$success-100:                                      #146c43 !default; // custom-variable
+$success-200:                                      #13653f !default; // custom-variable
+$success-300:                                      #0f5132 !default; // custom-variable
+$success-400:                                      #198754 !default; // custom-variable
+$success-500:                                      #055160 !default; // custom-variable
+$success-600:                                      #258754 !default; // custom-variable
+$success-light:                                    #71dd37 !default; // custom-variable
+$success-light-100:                                #20b426 !default; // custom-variable
+$success-light-200:                                #8fdf82 !default; // custom-variable
+$success-light-300:                                #4FCA31 !default; // custom-variable
+
+$pink:                                             #ee22fa !default; // custom-variable
+$pink-100:                                         #a804b2 !default; // custom-variable
+$cyan:                                             #1BC5BD !default; // custom-variable
+$danger-100:                                       #DC3545 !default; // custom-variable
+$danger-200:                                       #F64E60 !default; // custom-variable
+$danger-300:                                       #ff3e1d !default; // custom-variable
+$danger-400:                                       #d33333 !default; // custom-variable
+$danger-600:                                       #842029 !default; // custom-variable
+$danger-light-100:                                 #f8d7da !default; // custom-variable
+$warning-100:                                      #FFA800 !default; // custom-variable
+$warning-200:                                      #FFC107 !default; // custom-variable
+$warning-300:                                      #664d03 !default; // custom-variable
+$warning-400:                                      #ffab00 !default; // custom-variable
+$info-100:                                         #03c3ec !default; // custom-variable
+$info-200:                                         #bce8f1 !default; // custom-variable
+$info-300:                                         #cff4fc !default; // custom-variable
+$code-color:                                       #d63384 !default; // custom-variable
+
+// quill
+
+$ql-bg-red:                                        #e60000 !default; // custom-variable
+$ql-bg-orange:                                     #f90 !default; // custom-variable
+$ql-bg-yellow:                                     #ff0 !default; // custom-variable
+$ql-bg-green:                                      #008a00 !default; // custom-variable
+$ql-bg-purple:                                     #93f !default; // custom-variable
+$tree-bg-purple:                                   #696cff !default; // custom-variable
+$tree-view-border:                                 #14274f !default; // custom-variable
+
+// sidebar + Header + wrapper variables
+
+$sidebar-header-bg:                                #0C1427 !default; // custom-variable
+$header-bg:                                        #0d1932 !default; // custom-variable
+$header-shadow:                                    0px 1px 0px 0px #152344 !default; // custom-variable
+$sidebar-bg:                                       #0c1427 !default; // custom-variable
+$sidebar-border:                                   #14274f !default; // custom-variable
+$sidebar-border-right:                             #14274f !default; // custom-variable
+$active-nav-item:                                  #2f80ed !default; // custom-variable
+$active-nav-link:                                  #3699FF !default; // custom-variable
+$toggler-bg:                                       #2D3852 !default; // custom-variable
+$sidebar-label:                                    #8F939A !default; // custom-variable
+$wrapper-bg:                                       #0b1428 !default; // custom-variable
+$nav-link:                                         #959fb7 !default; // custom-variable
+$side-nav-link:                                    rgb(143, 147, 154) !default; // custom-variable
+$nav-link-active:                                  #17a2ad !default; // custom-variable
+$scrollbar-bg:                                     #162648 !default; // custom-variable
+$scrollbar-thumb:                                  #162648 !default; // custom-variable
+$dropdown-profile:                                 $side-nav-link !default; // custom-variable
+$dropdown-profile-hover:                           #FFFFFF !default; // custom-variable
+
+// custom-badges
+
+$bdage-light-danger:                               rgb(235, 87, 87, 0.3) !default; // custom-variable
+$bdage-light-success:                              rgb(39, 174, 96, 0.4) !default; // custom-variable
+$bdage-light-warning:                              #473d1a !default; // custom-variable
+$bdage-light-info:                                 #344d52 !default; // custom-variable
+$bdage-light-primary:                              #4e5f78 !default; // custom-variable
+$bdage-light-secondary:                            #30325e !default; // custom-variable
+$badge-success-text:                                 $success-light !default; // custom-variable
+$badge-primary-text:                               #9dc5ef !default; // custom-variable
+$badge-secondary-text:                             #bfbfbf !default; // custom-variable
+$bdage-item-light-color:                           #636464 !default; // custom-variable
+$bdage-item-light-bg:                              #fefefe !default; // custom-variable
+$bdage-item-dark-bg:                               #d3d3d4 !default; // custom-variable
+$list-secondary-color:                             #6c7293 !default; // custom-variable
+$list-secondary-bg:                                #1b1c31 !default; // custom-variable
+
+// editors
+
+$toolbar-bg-color:                                 #0c1427 !default; // custom-variable
+$toolbar-btn-bg:                                   #0b1222 !default; // custom-variable
+$toolbar-btn-border:                               transparent !default; // custom-variable
+$editor-frame-border:                              #383440 !default; // custom-variable
+$editor-btn-hover:                                 #2f3742 !default; // custom-variable
+
+// dropdowns
+
+$dropdown-box-shadow:                                0px 15px 50px 0px rgb(82 63 105 / 15%) !default; // bootstrap-variable
+$dropdown-link-hover-color:                        #ffffff !default; // bootstrap-variable
+$dropdown-link-hover-bg:                           #2f80ed !default; // bootstrap-variable
+$dropdown-min-width:                                 225px !default; // bootstrap-variable
+$dropdown-item-padding-y:                            0.5rem !default; // bootstrap-variable
+$caret-spacing:                                      0.260em !default; // bootstrap-variable
+$caret-width:                                        4px !default; // bootstrap-variable
+$dropdown-bg:                                      #0c1427 !default; // bootstrap-variable
+$dropdown-link-color:                              #b5b5c3 !default; // bootstrap-variable
+$dropdown-border-color:                            #14274f !default; // bootstrap-variable
+$dropdown-border-radius:                             0.25rem !default; // bootstrap-variable
+$dropdown-link-active-bg:                          #2f80ed !default; // bootstrap-variable
+
+// Calendars
+
+$calendar-border-color:                            #14274f;
+$calendar-toolbar-bg:                              #101010;
+$calendar-toolbar-border:                            transparent;
+$calendar-btn-disabled-bg:                         #101010;
+$calendar-btn-disabled-color:                      #6d6d80;
+$calendar-btn-disabled-border:                     #101010;
+$calendar-btn-light-color:                           #FFFFFF;
+$calendar-btn-light-bg:                            #00a3ff;
+$calendar-btn-light-border:                        #00a3ff;
+$fullcalendar-border-color:                        #14274f;
+$fullcalendar-header-color:                        #aeafba;
+$fullcalendar-day-nmb:                             #f8f8f8;
+$fullcalendar-event-bg:                            #373d40;
+$fullcalendar-event-border:                        #373d40;
+$fullcalendar-event-color:                         #ffffff;
+$theme-border-clr:                                 #14274f;
+
+//  flatpicker
+
+$flatpicker-bg:                                    #0c1427;
+$flatpicker-days:                                  #0c1427;
+$flatpicker-time-bg:                               #0c1427;
+$flatpicker-divider-sahdow:                          transparent;
+$flatpicker-weeks-bg:                              #0c1427;
+
+// tooltips
+
+$tooltip-border-radius:                              0.25rem !default; // bootstrap-variable         
+$tooltip-color:                                    #FFFFFF !default; // bootstrap-variable                    
+
+// navbar
+
+$navbar-toggler-font-size:                           1.075rem !default; // bootstrap-variable
+$navbar-light-brand-color:                         #FFFFFF !default; // bootstrap-variable                        
+$navbar-light-color:                               #FFFFFF !default; // bootstrap-variable                        
+$navbar-light-active-color:                        #FFFFFF !default; // bootstrap-variable                        
+$navbar-light-disabled-color:                      #FFFFFF !default; // bootstrap-variable   
+$navbar-dark-color:                                #FFFFFF !default; // bootstrap-variable
+$navbar-dark-brand-color:                          #FFFFFF !default; // bootstrap-variable
+$navbar-dark-active-color:                         #FFFFFF !default; // bootstrap-variable
+$navbar-dark-hover-color:                          #FFFFFF !default; // bootstrap-variable
+
+// nav and tabs
+
+$nav-pills-border-radius:                            0.25rem !default; // bootstrap-variable
+$nav-link-color:                                     #FFFFFF; // bootstrap-variable
+$nav-tabs-link-active-color:                         #FFFFFF; // bootstrap-variable
+$nav-tabs-link-active-border-color:                  #14274f #14274f #14274f !default; // bootstrap-variable
+$nav-tabs-link-active-bg:                            #2f80ed !important; // bootstrap-variable
+$nav-tabs-link-hover-border-color:                   #14274f #14274f #14274f !default; // bootstrap-variable
+$nav-tabs-border-color:                              #14274f !default; // bootstrap-variable
+$nav-pills-link-active-bg:                           #2f80ed !default; // bootstrap-variable
+$nav-pills-link-active-color:                        #FFFFFF; // bootstrap-variable
+
+// toasts
+
+$toast-box-shadow:                                   0 0.5rem 1rem rgb(0 0 0 / 15%)  !default; // bootstrap-variable
+$toast-header-background-color:                    rgb(22 21 27) !default; // bootstrap-variable
+$toast-background-color:                           rgb(34 31 41) !default; // bootstrap-variable
+$toast-border-radius:                                calc(0.25rem - 1px) !default; // bootstrap-variable
+$toast-header-color:                                 #FFFFFF !default; // bootstrap-variable
+$toast-border-color:                               rgb(52 47 62) !default; // bootstrap-variable
+
+// tagify variables
+
+$tagify-dd-color-primary:                          #2f80ed;
+$tagify-dd-bg-color:                               #14274f;
+$tags-border-color:                                #14274f;
+$tags-hover-border-color:                          #14274f;
+$tags-focus-border-color:                          #14274f;
+$tag-bg:                                           #08070C;
+$tag-hover:                                        #D3E2E2;
+$tag-text-color:                                   #7887A4;
+$tag-text-color--edit:                             #7887A4;
+$tag-pad:                                            0.3em 0.5em;
+$tag-inset-shadow-size:                              1.1em;
+$tag-invalid-color:                                #3699FF;
+$tag-invalid-bg:                                   rgba(255, 62, 29, 0.5);
+$tag-remove-bg:                                    rgba(255, 62, 29, 0.3);
+$tag-remove-btn-color:                               $black;
+$tag-remove-btn-bg:                                  none;
+$tag-remove-btn-bg--hover:                         #ff2804;
+$tag--min-width:                                     1ch;
+$tag--max-width:                                     auto;
+$tag-hide-transition:                                0.3s;
+$placeholder-color:                                #0c1427;
+$placeholder-color-focus:                          #62626e;
+$loader-size:                                        0.8em;
+$tag-opacity:                                        1;
+$tag-editable-color:                               #92929F;
+$tag-editable-bg:                                    $black;
+$tagify-panel-bg:                                  #0c1427;
+
+// select2
+
+$slider-bg:                                        #2e2f41 !default; // custom-variable
+$select2-bg:                                       #0c1427 !default; // custom-variable
+$select2-field-bg:                                 #0c1427 !default; // custom-variable
+$select2-tag-bg:                                   rgb(28 75 139) !default; // custom-variable
+$select2-color:                                    rgb(141 184 241)!default; // custom-variable
+$select2-tag-bg-hover:                             rgb(11 59 124) !default; // custom-variable
+$select2-tag-color-hover:                          rgb(141 184 241) !default; // custom-variable
+$select2-multi-bg:                                 #08070C !default; // custom-variable
+$select2-multi-color:                              #7887A4 !default; // custom-variable
+$select2-hover-bg:                                 rgba(35, 52, 70, .16) !default; // custom-variable
+$select2-drop-panel-bg:                            #0c1427 !default; // custom-variable
+$select2-option-true:                              #2f80ed !default;
+$select2-option-heighlighted:                      #2f80ed !default;
+$select2-input-bg:                                 #0c1427;
+$select2-input-border:                             #14274f;
+$select2-option-true-color:                        #FFFFFF;
+$select2-option-heighlighted-color:                #FFFFFF;
+
+
+// Buttons
+
+$btn-padding-y:                                      0.75rem !default; // bootstrap-variable
+$btn-padding-x:                                      1.5rem !default; // bootstrap-variable
+$btn-font-size:                                      1rem !default; // bootstrap-variable
+$btn-padding-y-sm:                                   0.55rem !default; // bootstrap-variable
+$btn-padding-x-sm:                                   1.25rem !default; // bootstrap-variable
+$btn-font-weight:                                    500 !default; // bootstrap-variable
+$btn-padding-y:                                      0.75rem !default; // bootstrap-variable
+$btn-padding-x:                                      1.5rem !default; // bootstrap-variable
+$btn-font-size-sm:                                   0.925rem !default; // bootstrap-variable
+$btn-padding-y-lg:                                   0.825rem !default; // bootstrap-variable
+$btn-padding-x-lg:                                   1.75rem !default; // bootstrap-variable
+$btn-font-size-lg:                                   1.15rem !default; // bootstrap-variable
+$btn-border-radius:                                  0.475rem !default; // bootstrap-variable
+$btn-border-radius-sm:                               0.475rem !default; // bootstrap-variable
+$btn-border-radius-lg:                               0.475rem !default; // bootstrap-variable
+$btn-border-radius:                                  0.475rem !default; // bootstrap-variable
+$btn-light-bg:                                       $light-400; // bootstrap-variable
+$btn-light-hover-bg:                                 $light-300; // bootstrap-variable 
+$btn-light-color:                                    $blue !default; // bootstrap-variable
+$btn-light-border:                                   $light-400; // bootstrap-variable
+$btn-success-background:                             $success-100; // bootstrap-variable
+$btn-success-border:                                 $success-200; // bootstrap-variable 
+$btn-primary-active-bg:                              $heavy-blue-100; // bootstrap-variable
+$btn-primary-hover-bg:                               $heavy-blue-300; // bootstrap-variable
+$btn-focus-box-shadow:                               none; // bootstrap-variable
+$btn-outline-checked:                              #FFFFFF !default;
+$btn-outline-hover:                                #FFFFFF !default;
+$btn-outline-dark-border:                          #616167 !default;
+$btn-outline-dark-border-hover:                    #d1d1d2 !default;
+$btn-outline-dark-color:                           #616167 !default;
+$btn-outline-dark-color-hover:                     #FFFFFF !default;
+$btn-outline-dark-hover-bg:                        #1e1e2d !default;
+$btn-outline-dark-focus-bg:                        #1e1e2d !default;
+$btn-dark-color:                                   #fff !important;
+$btn-dark-bg:                                      #212529 !important;
+$btn-dark-hover-bg:                                #1c1f23 !default;
+$btn-outline-light-border:                         #f8f9fa !default;
+$btn-outline-light-border-hover:                   #f8f9fa !default;
+$btn-outline-light-color:                          #f8f9fa!default;
+$btn-outline-light-color-hover:                    #272731 !default;
+$btn-outline-light-hover-bg:                       #f8f9fa !default;
+$btn-outline-light-focus-bg:                       #f8f9fa !default;
+$btn-outline-light-shadow:                           0 0 0 0.25rem rgb(248 249 250 / 50%) !default;
+$btn-color-white:                                  #fff !default;
+
+// Accordion
+
+$accordion-button-padding-y:                         1.5rem !default; // bootstrap-variable
+$accordion-button-padding-x:                         1.5rem !default; // bootstrap-variable
+$accordion-button-active-color:                      #fff; // bootstrap-variable
+$accordion-button-active-bg:                         #0c1427 !default; // bootstrap-variable
+$accordion-button-bg:                                #0b1222!default; // bootstrap-variable
+$accordion-border-radius:                            0.25rem !default;  // bootstrap-variable
+$accordion-border-color:                             #14274f !default;  // bootstrap-variable
+$accordion-button-color:                             #7887A4 !default;  // bootstrap-variable
+$accordion-bg:                                       #0c172f !default;  // bootstrap-variable
+
+// Alerts
+
+$alert-margin-bottom:                                1.5rem !default; // bootstrap-variable
+$alert-border-radius:                                0.25rem !default; // bootstrap-variable
+
+// popovers
+
+$popover-header-bg:                                  #1a1820 !default; // bootstrap-variable
+$popover-bg:                                         #221f29 !default; // bootstrap-variable
+$popover-font-size:                                    1rem !default; // bootstrap-variable
+$popover-border-color:                               rgb(108 117 125 / 32%) !default; // bootstrap-variable
+
+// Breadcrumbs
+
+$breadcrumb-active-color:                            #ccc; // bootstrap-variable
+$breadcrumb-divider-color:                           $grayscale-1000; // bootstrap-variable
+
+// Shadow
+
+$box-shadow:                                         0 0.5rem 1rem rgb(0 0 0 / 5%) !default; // bootstrap-variable
+$box-shadow-sm:                                      0 0.125rem 0.25rem rgb(0 0 0 / 8%) !default; // bootstrap-variable
+
+// progess-bar
+
+$progress-border-radius:                             0.25rem !default; // bootstrap-variable
+$progress-bg:                                      #2e2f41 !default; // bootstrap-variable
+
+// list-group
+
+$list-group-border-radius:                           0.25rem !default; // bootstrap-variable
+$list-group-color:                                   #FFFFFF !default; // bootstrap-variable
+$list-group-bg:                                      #0c1427 !default; // bootstrap-variable
+$list-group-border-color:                            #14274f !default; // bootstrap-variable
+$list-group-active-bg:                               #2f80ed !default; // bootstrap-variable
+$list-group-active-color:                            #fff !default; // bootstrap-variable
+
+//modal, offcanvas
+
+$zindex-offcanvas:                                   1070 !default; // bootstrap-variable
+$zindex-modal:                                       1080 !default; // bootstrap-variable
+$zindex-modal-backdrop:                              1050 !default; // bootstrap-variable
+$offcanvas-bg-color:                               #0d1932 !default; // bootstrap-variable
+$modal-content-bg:                                 #0c1427 !default; // bootstrap-variable
+$modal-content-border-color:                       #14274f !default; // bootstrap-variable
+$btn-close-color:                                  #fff !default; // bootstrap-variable
+$btn-close-white-filter:                            grayscale(100%) brightness(200%) !default; // bootstrap-variable
+
+// pagination
+
+$pagination-border-color:                          #7887A4 !default; // bootstrap-variable
+$pagination-color:                                 #7887A4 !default; // bootstrap-variable
+$pagination-bg:                                    #0c1427 !default; // bootstrap-variable
+$pagination-active-bg:                             #009ef7 !default; // bootstrap-variable
+$pagination-active-border-color:                   #009ef7 !default; // bootstrap-variable
+$pagination-link:                                  #f1faff !default; // bootstrap-variable
+$pagination-hover-color:                           #009ef7 !default; // bootstrap-variable
+$pagination-disabled-bg:                           transparent !default; // bootstrap-variable
+$pagination-disabled-color:                        #5e6278 !default; // bootstrap-variable
+$pagination-disabled-border-color:                 #393744 !default; // bootstrap-variable
+$pagination-hover-bg:                              #2e2f41 !default; // bootstrap-variable
+$pagination-hover-border-color:                      transparent !default; // bootstrap-variable
+$pagination-focus-color:                           #009ef7 !default; // bootstrap-variable
+$pagination-focus-bg:                              #2e2f41 !default; // bootstrap-variable;
+
+
+// link & colors
+
+$link-decoration:                                    none !default; // bootstrap-variable
+$link-color:                                         $blue; // bootstrap-variable
+$text-muted:                                         $light-100; // bootstrap-variable
+
+// borders
+
+$border-color:                                       #11244d !default; // bootstrap-variable
+$border-radius:                                      0.5rem !default; // bootstrap-variable
+
+// badges
+
+$badge-font-weight:                                  600 !default; // bootstrap-variable
+$badge-border-radius:                                0.25rem !default; // bootstrap-variable
+$badge-font-size:                                    0.85em !default; // bootstrap-variable
+
+// cards
+
+$card-bg:                                            #0c172f !default; // bootstrap-variable
+$card-border-color:                                  #14274f  !default; // bootstrap-variable
+$card-border-radius:                                 0.475rem; // bootstrap-variable
+$card-spacer-y:                                      2rem !default; // bootstrap-variable
+$card-spacer-x:                                      2rem !default; // bootstrap-variable
+$card-cap-padding-x:                                 $card-spacer-x / 2 !default; // bootstrap-variable
+$card-cap-padding-y:                                 $card-spacer-y / 2 !default; // bootstrap-variable
+$card-cap-bg:                                        rgba(0,0,0,.03) !default; // bootstrap-variable
+$card-footer-bg:                                     transparent !default; // bootstrap-variable
+$card-footer-border-top:                             0 !default; // bootstrap-variable
+$header-border-bottom:                               0px !default;
+
+$pricing-tab-bg:                                   #0d1932 !default;
+$pricing-tab-border-color:                         #14274f !default;
+
+// table
+
+$table-cell-padding-y:                               1.25rem !default; // bootstrap-variable
+$table-cell-padding-x:                               0.85rem !default; // bootstrap-variable
+$table-th-font-weight:                               400 !default; // bootstrap-variable
+$table-caption-color:                                $dark-gray-100; // bootstrap-variable
+$table-cell-vertical-align:                          middle; // bootstrap-variable
+$table-group-separator-color:                      #14274f; // bootstrap-variable
+$table-border-color:                               #14274f !default; // bootstrap-variable
+$table-border-top:                                 #14274f !default;
+$table-color:                                      #fff !important;
+$table-th:                                         #fff !default;
+$table-dark-bg:                                    #0b1222 !default;
+$table-dark-border-color:                          #14274f !default;
+$table-dark-color:                                 #fff !default;
+
+// spacer
+
+$spacer:                                             1rem !default;
+
+// forms
+
+$input-padding-y:                                    0.7rem !default;
+$input-padding-x:                                    1.25rem !default;
+$input-padding-y-lg:                                 0.5rem !default;
+$input-padding-x-lg:                                 1rem !default;
+$input-padding-y-sm:                                 0.25rem !default;
+$input-padding-x-sm:                                 0.5rem !default;
+$input-group-addon-padding-y:                        0.375rem;
+$input-group-addon-padding-x:                        0.75rem;
+$form-select-padding-y:                              0.7rem;
+$form-select-padding-x:                              1.15rem;
+$form-select-indicator-padding:                      5rem;
+$input-box-shadow:                                   none;
+$input-focus-box-shadow:                             none;
+$form-select-focus-box-shadow:                       none;
+$form-check-input-focus-box-shadow:                  none;
+$input-font-size:                                    1rem !default;
+$input-font-size-sm:                                 0.925rem;
+$form-label-font-size:                               1.05rem;
+$form-text-font-size:                                0.925rem;
+$form-select-font-size:                              1.1rem;
+$input-font-size-lg:                                 1.25rem;
+$form-label-font-weight:                             400;
+$input-border-radius:                                0.475rem;
+$form-select-border-radius:                          0.475rem;
+$form-check-input-border-radius:                     0.42rem !default;
+$input-border-radius-lg:                             0.475rem;
+$input-focus-border-color:                           #14274f;
+$form-text-color:                                    #565d6c;
+$input-placeholder-color:                            #62626e;
+$form-select-color:                                  #92929F;
+$form-select-focus-border-color:                     #14274f;
+$form-select-disabled-bg:                            #191523;
+$form-select-disabled-border-color:                  #14274f;
+$form-select-indicator-color:                           #14274f;
+$field-readonly:                                     #0b1222;
+$form-range-track-bg:                                $light-800;
+$input-disabled-bg:                                  #191523;
+$input-disabled-border-color:                        #14274f;
+$form-check-input-bg:                                #0b1427;
+$form-text-margin-top:                               0.25rem;
+$form-select-bg-position:                            right 0.75rem center;
+$form-check-input-width:                             1.5em !default;
+$form-check-input-border:                            1px solid #14274f !important;
+
+$form-control-solid-color:                         #0c1427 !default;
+$input-group-addon-bg:                             #090f20 !default; // bootstrap-variable
+$input-bg:                                         #0c1427 !important; // bootstrap-variable
+$input-border-color:                               #14274f !default; 
+$input-color:                                      #92929F !default; // bootstrap-variable
+$input-focus-bg:                                   #0b1222 !default; // bootstrap-variable
+$custom-file-bg:                                   #090f20 !default;
+$custom-file-border-right:                           0 default;
+$custom-file-color:                                #777783; 
+$range-handle-border:                              #ffffff75;
+
+$input-group-addon-color:      #fff;
+
+// checkbox
+
+$form-switch-width:                                  3.5em !default;
+$form-switch-border-radius:                          2em !default;
+$form-check-input-focus-border:                      0 !default;
+
+//  Charts
+
+$chart-canvas-bg:                                    transparent;
+
+// dropzone
+
+$dropzone-border-color:                            #383d46;
+
+// Touchspin
+
+$touchspin-border-color:                           #14274f;
+$touchspin-bg:                                     #090f20;
+$touchspin-color:                                  #3699FF;
+
+// Gantt Chart
+
+$gantt-header-bg:                                  #0c172f;
+$gantt-header-stroke:                              #14274f;
+$gantt-row-fill:                                   #0c172f;                     
+$gantt-row-stroke:                                 #14274f; 
+$gantt-header-text:                                  12px; 
+$gantt-arrow-stroke:                               #14274f; 
+$bar-label-font-size:                                12px;  
+
+// Kanban-chart
+
+$kanban-drag-item-bg:                              #0c172f;
+$kanban-drag-item-border-color:                    #14274f;
+
+// prism code variables
+
+$code-color:                                       #d63384;
+$code-text-shadow:                                   transparent;
+$code-font-size:                                   16px !default; // bootstarp-variable
+$highlight-code-bg:                                #0b1427;
+
+// svg
+
+$svg-color:                                        #fff !default;
+
+// <hr>
+
+$hr-color:                                           $light-200;
+
+// container widths
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px
+) !default;

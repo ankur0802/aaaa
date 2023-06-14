@@ -1,0 +1,33 @@
+// importing varibales (Note: use variables-dark.scss for dark variant & variables.scss for light variant of theme)
+@import "../sass/variables.scss";
+
+// importing sizing utilities
+@import "../sass/utilities.scss";
+
+// importing bootstrap v5.0.1
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// importing plugins and styles
+@import "../../src/css/custom/style.scss";
+@import "../../src/css/sidebar/sidebar.scss";
+@import "../../src/css/bootstrap-icons/bootstrap-icons.scss";
+@import "../../src/css/calendar/toolbar.scss";
+@import "../../src/css/calendar/googlecalendar/main.scss";
+@import "../../src/css/calendar/fullcalendar/daygrid.scss";
+@import "../../src/css/calendar/fullcalendar/timegrid.scss";
+@import "../../src/css/calendar/fullcalendar/app.scss";
+@import "../../src/css/chart/chart.scss";
+@import "../../src/css/datatables/datatables.bootstrap5.scss";
+@import "../../src/css/datatables/responsive.bootstrap.scss";
+@import "../../src/css/dropzone/dropzone.scss";
+@import "../../src/css/editors/quill.scss";
+@import "../../src/css/editors/summernote.scss";
+@import "../../src/css/flatpicker/flatpicker.scss";
+@import "../../src/css/gantt-chart/default.scss";
+@import "../../src/css/kanbanboard/custom.scss";
+@import "../../src/css/map/jqvmap.scss";
+@import "../../src/css/range-slider/range-slider.scss";
+@import "../../src/css/map/leaflet.scss";
+@import "../../src/css/tagify/select2.scss";
+@import "../../src/css/tagify/tagify.scss";
+@import "../../src/css/touchspin/touchspin.scss";
