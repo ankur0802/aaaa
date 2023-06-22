@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { login } from 'src/app/data-types/dataTypes';
+import { AuthService } from '../../providers/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +9,14 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+constructor(private authservice:AuthService){}
 
+  userLogin(data:login){
 
-  loginSubmit(data:any){
-    console.log(data);
-    
+ this.authservice.userLogin(data)
 
   }
+
+  
 
 }

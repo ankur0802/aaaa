@@ -6,6 +6,7 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 
 
 
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     AuthComponent,
     LoginComponent,
     SignupComponent,
+    ForgotpasswordComponent,
  
   ],
   imports: [

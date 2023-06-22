@@ -5,7 +5,7 @@
             <div class="wrapper bg-white position-relative h-md-100 p-0">
                <div class="logo position-absolute top-0 z-index-9">
                   <a href="#" class="text-dark text-decoration-none w-100 p-3 d-inline-block"> 
-                  <span class="fs-5 fw-bolder letter-spacing-2">HORIZON</span> 
+                  <span class="fs-5 fw-bolder letter-spacing-2">CMP</span> 
                   </a>
                </div>
                <div class="outer-form position-relative d-md-flex align-items-center h-md-100">
@@ -13,7 +13,7 @@
                      <div class="w-300-p-min form-main position-relative d-flex align-items-center justify-content-center p-lg-0 p-md-4 mt-4 p-5 mx-auto">
                         <div class="login-wrap position-relative">
                            <h4 class="mb-2 fs-4 text-md-start text-center fw-semibold">Login to your account</h4>
-                           <form #login="ngForm" (ngSubmit)="loginSubmit(login.value)" class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4">
+                           <form #login="ngForm" (ngSubmit)="userLogin(login.value)" class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4">
                               <div class="form-group mb-4 gradient-border position-relative">
                                  <label for="username" class="form-label fw-medium mb-2">Username</label>
                                  <input class="form-control form-control-solid" type="text" id="username" placeholder="Enter your username" aria-label="user name" name="username"required 
@@ -25,7 +25,7 @@
                                  <input class="form-control form-control-solid" type="password" id="password" placeholder="Password" aria-label="password" name="password" required minlength="8"
                                  #password="ngModel" ngModel> 
                               </div>
-                              <p class="text-danger"><span *ngIf="password.invalid && password.touched" >Please enter valid password</span></p>
+                              <p class="text-danger"><span *ngIf="password.invalid && password.touched" >password should be at least 8 characters</span></p>
                            
                              
                               <div class="mt-4"> <button class="btn btn-primary w-100" [disabled]="login.invalid">Sign in</button>
@@ -33,13 +33,13 @@
                                  <img src="/assets/src/media/logo/google-logo.png" class="img-fluid me-2" alt="google">Sign in with Google</a>
                               </div>
                               <div class="text-center w-100 mt-5"> 
-                                 <a href="forgot-password.html" class="text-primary text-decoration-none">Forgot Password?</a> 
+                                 <a routerLink="/auth//forgotpassword" class="text-primary text-decoration-none">Forgot Password?</a> 
                               </div>
                            </form>
                         </div>
                      </div>
                      <div class="not-registered w-100 text-center position-absolute bottom-0">
-                        <p>Not registered yet? <a href="register.html" class="text-primary">Sign Up</a></p>
+                        <p>Not registered yet? <a routerLink="/auth/signup" class="text-primary">Sign Up</a></p>
                      </div>
                   </div>
                   <div class="col-md-5 col-12 pe-md-0">

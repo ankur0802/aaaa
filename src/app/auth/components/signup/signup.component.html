@@ -1,1 +1,63 @@
-<p>signup works!</p>
+<main class="vh-md-100">
+    <div class="container-fluid h-md-100">
+       <div class="row h-md-100">
+          <div class="col-12 p-0">
+             <div class="wrapper bg-white position-relative h-md-100 p-0">
+                <div class="logo position-absolute top-0 z-index-9">
+                   <a href="../../index.html" class="text-dark text-decoration-none  w-100 p-3 d-inline-block"> <span class="fs-5 fw-bolder letter-spacing-2">CMP</span> </a>
+                </div>
+                <div class="outer-form position-relative d-md-flex align-items-center h-md-100">
+                   <div class="col-md-7 col-12 position-relative d-flex justify-content-between h-md-100">
+                      <div class="w-300-p-min form-main position-relative d-flex align-items-center justify-content-center p-lg-0 p-md-4 mt-4 p-5 mx-auto">
+                         <div class="login-wrap position-relative w-100">
+                            <h4 class="mb-2 fs-4 text-md-start text-center fw-semibold">Create an account</h4>
+                            <form #signupform="ngForm" (ngSubmit)="signup(signupform.value)" class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4">
+                               <div class="form-group mb-4 gradient-border position-relative">
+                                  <label for="name" class="form-label fw-medium mb-2">Full Name</label>
+                                  <input class="form-control form-control-solid" type="text" id="name" placeholder="Enter your name" aria-label="full name" ngModel #name="ngModel" name="name" required> 
+                               </div>
+                               <div class="form-group mb-4 gradient-border position-relative">
+                                  <label for="email" class="form-label fw-medium mb-2">Email Address</label>
+                                  <input class="form-control form-control-solid" type="email" id="email" placeholder="Enter email address" aria-label="email"  name="email"
+                                  ngModel
+                                  #email="ngModel"
+                                  required
+                                  email> 
+                               </div>
+                               <p class="text-danger"><span *ngIf="email.invalid && email.touched" >Please enter valid email </span></p>
+                               <div class="form-group mb-4 gradient-border position-relative">
+                                  <label for="password" class="form-label fw-medium mb-2">Password</label>
+                                  <input class="form-control form-control-solid" type="password" id="password" placeholder="Password" aria-label="password" name="password" required minlength="8"
+                                  #password="ngModel" ngModel> 
+                               </div>
+                               <p class="text-danger"><span *ngIf="password.invalid && password.touched" >password should be at least 8 characters</span></p>
+                               <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                  <label class="form-check-label" for="flexCheckChecked"> I agree to the <a href="#" class="text-decoration-none text-primary">terms &
+                                  conditions</a> </label>
+                               </div>
+                               <div class="mt-4">
+                                  <button class="btn btn-primary w-100" [disabled]="signupform.invalid" >Create Account</button>
+                               </div>
+                            </form>
+                         </div>
+                      </div>
+                      <div class="not-registered w-100 text-center position-absolute bottom-0">
+                         <p>Already have an account? <a routerLink="/auth/login" class="text-primary">Login</a></p>
+                      </div>
+                   </div>
+                   <div class="col-md-5 col-12 pe-md-0">
+                      <div class="before-login-image position-relative vh-md-100 bg-primary d-flex align-items-center justify-content-between flex-wrap">
+                         <div class="right-content px-5 pt-5 pb-md-5 pb-3 mt-lg-4">
+                            <h3 class="text-white fw-semibold">Jump start your portfolio</h3>
+                            <p class="m-0 text-white">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. </p>
+                         </div>
+                         <img src="/assets/src/media/miscellaneous/before-login.png" class="w-md-75 w-100 ms-auto d-flex align-self-end ps-5" alt="screenshot">
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </main>

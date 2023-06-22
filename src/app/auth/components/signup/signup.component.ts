@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class SignupComponent {
 
+  signup(data:any){
+    console.log(data);
+    
+  }
+
 }
