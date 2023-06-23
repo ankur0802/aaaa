@@ -30,141 +30,22 @@
                                <th class="text-md-end">Action</th>
                             </tr>
                          </thead>
-                         <tbody>
+                         <tbody *ngFor="let user of userListData" >
                             <tr class="align-middle">
                                <td>
                                   <div class="d-flex align-items-center">
                                      <img alt="user" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-6.jpg">
                                      <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Ava Charlotte</h6>
+                                        <h6 class="mb-0 fw-medium">{{user.name}}</h6>
                                      </div>
                                   </div>
                                </td>
                                <td>Pennsylvania</td>
-                               <td>avachar@yahoo.com</td>
+                               <td>{{user.username}}</td>
                                <td>55(78)256987</td>
-                               <td>Designer</td>
+                               <td>{{user.role}}</td>
                                <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="user" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-9.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Charlie Stone</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>New York</td>
-                               <td>charlie@gmail.com</td>
-                               <td>22(35)14528</td>
-                               <td>Designer</td>
-                               <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="user" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/avatar-1.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Naah Lucas</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>Barcelona</td>
-                               <td>naahluc@gmail.com</td>
-                               <td>22(54)12096</td>
-                               <td>Web Developer</td>
-                               <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="logo" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-4.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Liam Benjamin</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>California</td>
-                               <td>liamben@yahoo.com</td>
-                               <td>44(11)10687</td>
-                               <td>Marketing</td>
-                               <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="user" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-2.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Amelia Harper</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>Barcelona</td>
-                               <td>ameliahar@yahoo.com</td>
-                               <td>55(12)15789</td>
-                               <td>Sales Department</td>
-                               <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="user" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-5.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Sophia Isabella</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>New York</td>
-                               <td>sophia@gmail.com</td>
-                               <td>55(11)15893</td>
-                               <td>PHP Developer</td>
-                               <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="logo" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-3.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Jas Gouldeby</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>United States</td>
-                               <td>jasgould@gmail.com</td>
-                               <td>22(34)15870</td>
-                               <td>Angular Developer</td>
-                               <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="user" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-8.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">Edsel Sprigging</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>France</td>
-                               <td>edsel@yahoo.com</td>
-                               <td>22(10)78411</td>
-                               <td>PR Manager</td>
-                               <td class="text-md-end">
-                                  <a class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary" href="user-detail.html">Details</a> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
+                                  <button class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary"  (click)="uderDetail(user._id)" >Details</button> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
                                </td>
                             </tr>
                          </tbody>
