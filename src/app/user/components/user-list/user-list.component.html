@@ -43,7 +43,16 @@
                                <td>Pennsylvania</td>
                                <td>{{user.username}}</td>
                                <td>55(78)256987</td>
-                               <td>{{user.role}}</td>
+                               <td><div class="dropdown">
+                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                   Dropdown button
+                                 </button>
+                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                   <li><a class="dropdown-item" href="#">Action</a></li>
+                                   <li><a class="dropdown-item" href="#">Another action</a></li>
+                                   <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                 </ul>
+                               </div></td>
                                <td class="text-md-end">
                                   <button class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary"  (click)="uderDetail(user._id)" >Details</button> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
                                </td>

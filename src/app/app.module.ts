@@ -9,8 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-import { userReducer } from './reducers/user.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './store/reducers/allReducers';
+import { SharedModule } from './shared/shared.module';
+import { RoleModule } from './role/role.module';
 
 
 @NgModule({
@@ -21,11 +23,13 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
+    RoleModule,
+    UserModule,
+    SharedModule,
     NgbModule,
     FormsModule,
-    UserModule,
     HttpClientModule,
-    StoreModule.forRoot({user:userReducer}, {}),
+    StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [],

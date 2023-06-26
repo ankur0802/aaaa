@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { endPoints } from 'src/app/constants/apiEndpoints/endPoints';
-import { login, loginResponse, userData } from 'src/app/data-types/dataTypes';
+import { createUserResponse, login, loginResponse, userData } from 'src/app/data-types/dataTypes';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -21,8 +21,13 @@ export class UserService {
 userDetail(){
   return this.http.get<userData>(`${endPoints.ME}`)
 }
+
 userDetailById(id:any){
   return this.http.get(`${endPoints.USER_DETAIL}/${id}`)
+}
+
+createAccount(data:any){
+  return this.http.post<createUserResponse>(`${endPoints.CREATE_USER}`, data)
 }
 
 

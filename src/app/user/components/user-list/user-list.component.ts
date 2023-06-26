@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { userlist } from 'src/app/actions/user.actions';
+import { userlist } from 'src/app/store/actions/user.actions';
 import { UserService } from '../../providers/user.service';
 
 @Component({

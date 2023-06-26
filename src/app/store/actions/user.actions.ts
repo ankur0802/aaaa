@@ -1,5 +1,6 @@
 import {createAction ,props} from '@ngrx/store'
-import { loginResponse, userData } from '../data-types/dataTypes';
+import { loginResponse, userData } from 'src/app/data-types/dataTypes';
+
 
 
 export const userlogin = createAction('userlogin', props<{userdata:loginResponse}>());

@@ -15,8 +15,50 @@ export interface userData {
   isDeleted: boolean;
   isSuperadmin: boolean;
   name: string;
-  role: string;
+  role: roleData;
   username: string;
   __v: number;
   _id: string;
+}
+
+export interface roleData {
+  permission: string;
+  isDeleted: boolean;
+  roleName: string;
+  __v: number;
+  _id: string;
+}
+export interface roleResponse {
+role:roleData[],
+success:boolean
+
+}
+
+
+export interface createUserResponse {
+  
+    success: boolean,
+    message: string,
+    data: {
+        name: string,
+        isSuperadmin: boolean,
+        role: roleData,
+        username: string,
+        createdAt: string,
+        isDeleted: boolean,
+        _id: string,
+        __v: number
+    },
+    Your_Password: string
+
+}
+
+
+
+export interface createRoleResponse {
+  
+  success: boolean,
+    message:string,
+    role: roleData
+
 }

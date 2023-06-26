@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import {myDetail } from 'src/app/actions/user.actions';
+import {myDetail } from 'src/app/store/actions/user.actions';
 import { AuthService } from 'src/app/auth/providers/services/auth.service';
 import { loginResponse, userData } from 'src/app/data-types/dataTypes';
 import { UserService } from '../../providers/user.service';
@@ -29,6 +29,7 @@ export class ProfileComponent {
     store.select(state=>state).subscribe((result:any)=>{
           this.loginResponseData = result?.user
       this.userData =result?.user.myDetail.user;
+ 
       
     })
    

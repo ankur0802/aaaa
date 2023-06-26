@@ -1,5 +1,6 @@
-import {  SharedState } from '../reducers/initial.state';
+
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { SharedState } from '../reducers/initial.state';
 export const USER_STATE_NAME = 'user';
 
 const getUserData = createFeatureSelector<SharedState>(USER_STATE_NAME);

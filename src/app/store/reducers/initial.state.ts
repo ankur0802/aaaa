@@ -10,3 +10,14 @@ export const initialState: SharedState = {
     message: '',
     myDetail:{}
   };
+export interface roleState {
+    data: any;
+    success: boolean;
+
+  }
+
+
+export const roleInitialState: roleState = {
+    data:{},
+    success: false,
+  };

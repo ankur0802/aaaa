@@ -1,0 +1,64 @@
+
+<div class="page-wrapper">
+    <div class="wrapper container-xxl px-0">
+
+       <div class="p-4">
+          <div class="d-md-flex justify-content-md-between">
+             <h4 class="mb-lg-4 mb-2 fw-semibold">All Roles</h4>
+             <ol class="breadcrumb text-muted fs-7">
+                <li class="breadcrumb-item">
+                   <a href="javascript:;">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                   <a href="javascript:;">Users</a>
+                </li>
+                <li class="breadcrumb-item ps-2 text-muted">All Roles</li>
+             </ol>
+          </div>
+          <div class="row">
+             <div class="col-md-12 col-12">
+                <div class="card">
+                   <div class="card-body user_list">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title fw-semibold">Roles:-</h5>
+                  <button class="btn fw-bolder border border-primary mb-5" (click)="createrole()">Create Role</button>
+                </div>
+                      <table class="table mb-0 text-nowrap border-start border-end" id="basic-datatable">
+                         <thead>
+                            <tr>
+                               <th>Role</th>
+                               <th>Permission</th>
+                            </tr>
+                         </thead>
+                         <tbody *ngFor="let role of roleListData"  >
+                            <tr class="align-middle">
+                               <td>
+                                  <div class="d-flex align-items-center">
+                                    
+                                     <div class="ms-3">
+                                        <h6 class="mb-0 fw-medium">{{role.roleName}}</h6>
+                                     </div>
+                                  </div>
+                               </td>
+                               <td> 
+                                 <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                     permissions
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"  >
+                                      <li><a class="dropdown-item" href="#">Action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                  </div>
+                              </td>
+                            </tr>
+                         </tbody>
+                      </table>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
