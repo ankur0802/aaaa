@@ -14,11 +14,12 @@
                             <form #createroleform="ngForm" (ngSubmit)="createRole(createroleform.value)" class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4">
                                <div class="form-group mb-4 gradient-border position-relative">
                                   <label for="roleName" class="form-label fw-medium mb-2">Enter Role Name</label>
-                                  <input class="form-control form-control-solid" type="text" id="name" placeholder="Enter your name" aria-label="full name" ngModel #name="ngModel" name="roleName" required > 
+                                  <input class="form-control form-control-solid" type="text" id="role" placeholder="Enter RoleName" aria-label="full name" ngModel #roleName="ngModel" name="roleName" required 
+                                  minlength="3"   pattern="^[a-z0-9_-]{3,15}$" ngModel  > 
                                </div>
-
+                               <p class="text-danger"><span *ngIf="roleName.invalid && roleName.touched" >Please enter valid roleName</span></p>
                                <div class="mt-4">
-                                  <button class="btn btn-primary w-100" [disabled]="createroleform.invalid" >Create Role</button>
+                                  <button class="btn btn-primary w-100" [disabled]=" submittted || createroleform.invalid" >Create Role</button>
                                </div>
                             </form>
                          </div>

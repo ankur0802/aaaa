@@ -16,14 +16,10 @@ export class UserDetailComponent {
   ngOnInit():void{
 
     const userId = this.activatedRoute.snapshot.paramMap.get('id')
-    console.log(userId);
     
     this.user.userDetailById(userId).subscribe((result:any)=>{
 
       this.userData = result.user
-      console.log(this.userData);
-      
-
       
     })
 

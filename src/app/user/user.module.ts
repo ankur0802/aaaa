@@ -9,6 +9,10 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { CreateComponent } from './components/create/create.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PasswordComponent } from './components/password/password.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
+
 
 
 @NgModule({
@@ -18,13 +22,16 @@ import { FormsModule } from '@angular/forms';
     UserListComponent,
     UserDetailComponent,
     CreateComponent,
+    PasswordComponent,
+    UserEditComponent,
     
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
 
   ]
 })

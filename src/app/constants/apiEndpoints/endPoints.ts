@@ -5,6 +5,12 @@ export const endPoints = {
     USER_DETAIL:`/api/v1/user`,
     ALL_ROLES:`/api/v1/role`,
     CREATE_USER:'api/v1/user',
-    CREATE_ROLE:'api/v1/role'
+    UPDATE_USER:'api/v1/user',
+    CREATE_ROLE:'api/v1/role',
+    DELETE_USER:'api/v1/user',
+    CHANGE_PASSWORD:'api/v1/user/password',
+    DELETE_ROLE:'api/v1/role',
+    GET_ROLE:'api/v1/role',
+    
 }
 

@@ -9,14 +9,17 @@ import { RoleService } from '../../providers/service/role.service';
 })
 export class CreateroleComponent {
 
+  submittted:boolean=false;
+
 constructor(private role:RoleService, private route:Router){}
 
 
   createRole(data:any){
+    this.submittted = true
     this.role.createRole(data).subscribe((result)=>{
       console.log(result);
       this.route.navigate(['role/all'])
-      
+      this.submittted=false
     })
     
   }

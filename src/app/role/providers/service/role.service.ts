@@ -21,6 +21,19 @@ export class RoleService {
 
   createRole(data:any){
     return this.http.post<createRoleResponse>(`${endPoints.CREATE_ROLE}`, data)
+  
   }
+
+  deleteRole(id:string){
+    return this.http.delete(`${endPoints.DELETE_ROLE}/${id}`)
+
+  }
+
+  getRole(id:string){
+    return this.http.get(`${endPoints.GET_ROLE}/${id}`)
+
+  }
+
+
 
 }

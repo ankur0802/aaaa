@@ -22,12 +22,26 @@ export interface userData {
 }
 
 export interface roleData {
-  permission: string;
+  permission: permissionData;
   isDeleted: boolean;
   roleName: string;
   __v: number;
   _id: string;
 }
+
+export interface permissionData {
+  manageProject:boolean,
+manageRole:boolean,
+manageUser:boolean,
+manageProjectDocument:boolean,
+manageImportExport:boolean,
+manageList:boolean,
+manageEpics:boolean,
+manageFields:boolean
+}
+
+
+
 export interface roleResponse {
 role:roleData[],
 success:boolean
@@ -60,5 +74,13 @@ export interface createRoleResponse {
   success: boolean,
     message:string,
     role: roleData
+
+}
+
+export interface changePasswordInput {
+  
+  oldPassword: string,
+  newPassword:string,
+  confirmPassword: string
 
 }

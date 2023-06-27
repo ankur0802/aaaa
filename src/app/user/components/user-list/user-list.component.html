@@ -1,68 +1,107 @@
 <div class="page-wrapper">
-    <div class="wrapper container-xxl px-0">
+  <div class="right-content">
+    <ngb-toast
+      *ngIf="show"
+      header="Message:-"
+      [autohide]="false"
+      (hidden)="show = false"
+    >
+      {{ message }}
+    </ngb-toast>
+  </div>
 
-       <div class="p-4">
-          <div class="d-md-flex justify-content-md-between">
-             <h4 class="mb-lg-4 mb-2 fw-semibold">Users List</h4>
-             <ol class="breadcrumb text-muted fs-7">
-                <li class="breadcrumb-item">
-                   <a href="javascript:;">Home</a>
-                </li>
-                <li class="breadcrumb-item">
-                   <a href="javascript:;">Users</a>
-                </li>
-                <li class="breadcrumb-item ps-2 text-muted">Users List</li>
-             </ol>
+  <div class="wrapper container-xxl px-0">
+    <div class="p-4">
+      <div class="d-md-flex justify-content-md-between">
+        <h4 class="mb-lg-4 mb-2 fw-semibold">Users List</h4>
+      </div>
+      <div></div>
+      <div class="row">
+        <div class="col-md-12 col-12">
+          <div class="card">
+            <div class="card-body user_list">
+              <h5 class="card-title fw-semibold">List</h5>
+              <table
+                class="table mb-0 text-nowrap border-start border-end"
+                id="basic-datatable"
+              >
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Country</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th class="text-md-end">Action</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let user of userListData">
+                  <tr class="align-middle">
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="ms-3">
+                          <h6 class="mb-0 fw-medium">{{ user.name }}</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Pennsylvania</td>
+                    <td>{{ user.username }}</td>
+                    <td>
+                      <div class="dropdown">
+                        <button
+                          class="btn border dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Dropdown
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td class="text-md-end">
+                      <button
+                        class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary"
+                        (click)="userDetail(user._id)"
+                      >
+                        Details
+                      </button>
+                      <button
+                        class="text-decoration-none me-1 btn-sm list-group-item-danger text-danger"
+                        [disabled]="submitted"
+                        (click)="userDelete(user._id)"
+                      >
+                        Delete
+                      </button>
+
+                      <button
+                        class="text-decoration-none btn-sm list-group-item-primary text-primary"
+                        [disabled]="submitted"
+                        (click)="editUser(user._id)"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div class="row">
-             <div class="col-md-12 col-12">
-                <div class="card">
-                   <div class="card-body user_list">
-                      <h5 class="card-title fw-semibold">List</h5>
-                      <table class="table mb-0 text-nowrap border-start border-end" id="basic-datatable">
-                         <thead>
-                            <tr>
-                               <th>User</th>
-                               <th>Country</th>
-                               <th>Email</th>
-                               <th>Contact No.</th>
-                               <th>Role</th>
-                               <th class="text-md-end">Action</th>
-                            </tr>
-                         </thead>
-                         <tbody *ngFor="let user of userListData" >
-                            <tr class="align-middle">
-                               <td>
-                                  <div class="d-flex align-items-center">
-                                     <img alt="user" class="rounded-circle w-35-p h-35-p" src="/assets/src/media/avatar/150-6.jpg">
-                                     <div class="ms-3">
-                                        <h6 class="mb-0 fw-medium">{{user.name}}</h6>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td>Pennsylvania</td>
-                               <td>{{user.username}}</td>
-                               <td>55(78)256987</td>
-                               <td><div class="dropdown">
-                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                   Dropdown button
-                                 </button>
-                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                   <li><a class="dropdown-item" href="#">Action</a></li>
-                                   <li><a class="dropdown-item" href="#">Another action</a></li>
-                                   <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                 </ul>
-                               </div></td>
-                               <td class="text-md-end">
-                                  <button class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary"  (click)="uderDetail(user._id)" >Details</button> <a class="text-decoration-none btn-sm list-group-item-danger text-danger" href="#">Delete</a>
-                               </td>
-                            </tr>
-                         </tbody>
-                      </table>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
+        </div>
+      </div>
     </div>
- </div>
+  </div>
+</div>

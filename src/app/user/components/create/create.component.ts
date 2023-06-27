@@ -10,6 +10,8 @@ import {createUserResponse} from '../../../data-types/dataTypes'
 })
 export class CreateComponent {
 
+  submitted:boolean=false;
+
   createdData:createUserResponse | undefined;
 
   constructor(private user: UserService, private route: Router) {}
@@ -23,13 +25,17 @@ export class CreateComponent {
     this.displayStyle = 'block';
   }
 
-  createAccount(data: any) {
+  createAccount(createaccform: any) {
+    let data = createaccform.value;
+    this.submitted = true
     this.user.createAccount(data).subscribe((result) => {
 
       this.createdData = result
       if (result) {
 
         this.openPopup();
+        this.submitted=false
+        createaccform.resetForm()
       }
     });
   }

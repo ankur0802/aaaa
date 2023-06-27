@@ -11,14 +11,15 @@
                       <div class="w-300-p-min form-main position-relative d-flex align-items-center justify-content-center p-lg-0 p-md-4 mt-4 p-5 mx-auto">
                          <div class="login-wrap position-relative w-100">
                             <h4 class="mb-2 fs-4 text-md-start text-center fw-semibold">Create user account</h4>
-                            <form #createaccform="ngForm" (ngSubmit)="createAccount(createaccform.value)" class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4">
+                            <form #createaccform="ngForm" (ngSubmit)="createAccount(createaccform)" class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4">
                                <div class="form-group mb-4 gradient-border position-relative">
                                   <label for="name" class="form-label fw-medium mb-2">Enter Name</label>
-                                  <input class="form-control form-control-solid" type="text" id="name" placeholder="Enter your name" aria-label="full name" ngModel #name="ngModel" name="name" required > 
+                                  <input class="form-control form-control-solid" type="text" id="name" placeholder="Enter your name" aria-label="full name" ngModel #name="ngModel" name="name" required 
+								  minlength="3" pattern="[A-Za-z0-9_]{1,15}" ngModel > 
                                </div>
-
+							   <p class="text-danger"><span *ngIf="name.invalid && name.touched" >Please Enter A Valid Name</span></p>
                                <div class="mt-4">
-                                  <button class="btn btn-primary w-100" [disabled]="createaccform.invalid" >Create Account</button>
+                                  <button class="btn btn-primary w-100" [disabled]="submitted || createaccform.invalid" >Create Account</button>
                                </div>
                             </form>
                          </div>

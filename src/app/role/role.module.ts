@@ -7,13 +7,15 @@ import { AllrolesComponent } from './components/allroles/allroles.component';
 import { SharedModule } from '../shared/shared.module';
 import { CreateroleComponent } from './components/createrole/createrole.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateRoleComponent } from './components/update-role/update-role.component';
 
 
 @NgModule({
   declarations: [
     RoleComponent,
     AllrolesComponent,
-    CreateroleComponent
+    CreateroleComponent,
+    UpdateRoleComponent
   ],
   imports: [
     CommonModule,
