@@ -15,7 +15,7 @@
                                <div class="form-group mb-4 gradient-border position-relative">
                                   <label for="name" class="form-label fw-medium mb-2">Enter Name</label>
                                   <input class="form-control form-control-solid" type="text" id="name" placeholder="Enter your name" aria-label="full name" ngModel #name="ngModel" name="name" required 
-								  minlength="3" pattern="[A-Za-z0-9_]{1,15}" ngModel > 
+								  minlength="3" ngModel > 
                                </div>
 							   <p class="text-danger"><span *ngIf="name.invalid && name.touched" >Please Enter A Valid Name</span></p>
                                <div class="mt-4">

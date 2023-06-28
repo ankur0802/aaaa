@@ -6,7 +6,7 @@ import { RoleService } from './role/providers/service/role.service';
 import { allRoles } from './store/actions/role.actions';
 import { myDetail } from './store/actions/user.actions';
 import { UserService } from './user/providers/user.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,12 +20,10 @@ export class AppComponent {
     private route: Router,
     private store: Store,
     private user: UserService,
-    private role: RoleService, private store1: Store<{ role: roleData }>
+    private role: RoleService, private store1: Store<{ role: roleData }>,
+    private toastr: ToastrService
   ) {
-    this.token = localStorage.getItem('auth_token');
-    if (!this.token) {      
-      route.navigate(['auth/login']);
-    }
+  
 
     user.userDetail().subscribe((result) => {
       this.store.dispatch(myDetail({ myDetail: result }));
@@ -38,5 +36,13 @@ export class AppComponent {
     }); 
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.token = localStorage.getItem('auth_token');
+    if (!this.token) {      
+      this.route.navigate(['auth/login']);
+    }else{
+
+      // this.route.navigate(['user/profile'])
+    }
+  }
 }

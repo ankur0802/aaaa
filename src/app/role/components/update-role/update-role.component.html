@@ -3,48 +3,31 @@
 
   <div class="wrapper container-xxl px-0">
     <div class="p-4">
-      <div class="d-md-flex justify-content-md-between">
-        <h4 class="mb-lg-4 mb-2 fw-semibold">Users List</h4>
-      </div>
+      <div class="d-md-flex justify-content-md-between"></div>
       <div></div>
       <div class="row">
         <div class="col-md-12 col-12">
           <div class="card">
             <div class="card-body user_list">
-              <h5 class="card-title fw-semibold">List</h5>
-          <form action="">
-            <table
-            class="table mb-0 text-nowrap border-start border-end"
-            id="basic-datatable"
-          >
-            <thead>
-              <tr>
-                <th>Permissions</th>
-                <th>Role</th>
+              <h5 class="card-title fw-semibold">Permissions List</h5>
 
-                
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="align-middle">
-                <td >
-                  <div class="d-flex align-items-center" *ngFor="let per of permissions">
-                    <div class="ms-3">
-                      <h6 class="mb-0 fw-medium">{{per}}</h6>
-                    </div>
+
+
+              <form #updateroleform="ngForm"
+              (ngSubmit)="roleUpdate(updateroleform)" class="d-flex flex-column">
+                <div class="" *ngFor="let per of permissions">
+                  <label for="roleName" class="form-label fw-medium mb-2">{{per}}</label>
+                  <input class="float-right align-self-end" type="checkbox" name={{per}}
+                  checked [ngModel]="false" ngModel  > 
+               </div>
+              
+                  <div class="mt-4">
+                    <button class="btn btn-primary w-100" [disabled]="submitted">
+                      Update Role
+                    </button>
                   </div>
-                </td>
-                <td>
-                  <div>
-                    <input type="checkbox" >
-                  </div>
-                </td>
+              </form>
 
-
-              </tr>
-            </tbody>
-          </table>
-          </form>
             </div>
           </div>
         </div>

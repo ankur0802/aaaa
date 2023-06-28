@@ -9,6 +9,11 @@ export interface loginResponse {
   success: boolean;
   data: userData;
 }
+export interface loginfailResponse {
+  message: string;
+  success: boolean;
+
+}
 
 export interface userData {
   createdAt: string;

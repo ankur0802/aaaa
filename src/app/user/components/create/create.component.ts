@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../providers/user.service';
 import {createUserResponse} from '../../../data-types/dataTypes'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-create',
@@ -14,7 +15,7 @@ export class CreateComponent {
 
   createdData:createUserResponse | undefined;
 
-  constructor(private user: UserService, private route: Router) {}
+  constructor(private user: UserService, private route: Router, private toaster:ToastrService) {}
 
   displayStyle = 'none';
 
@@ -37,6 +38,13 @@ export class CreateComponent {
         this.submitted=false
         createaccform.resetForm()
       }
-    });
+    },
+    (error)=>{
+      this.submitted=false
+      createaccform.resetForm()
+
+      this.toaster.error(error.error.message)
+    }
+    );
   }
 }

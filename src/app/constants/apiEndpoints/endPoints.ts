@@ -11,6 +11,8 @@ export const endPoints = {
     CHANGE_PASSWORD:'api/v1/user/password',
     DELETE_ROLE:'api/v1/role',
     GET_ROLE:'api/v1/role',
+    UPDATE_ROLE:'api/v1/role',
+    LOGOUT:'api/v1/logout'
     
 }
 

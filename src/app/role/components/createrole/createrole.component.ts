@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { allRoles } from 'src/app/store/actions/role.actions';
 import { RoleService } from '../../providers/service/role.service';
 
 @Component({
@@ -11,15 +13,23 @@ export class CreateroleComponent {
 
   submittted:boolean=false;
 
-constructor(private role:RoleService, private route:Router){}
+constructor(private role:RoleService, private route:Router, private store:Store){}
 
 
   createRole(data:any){
     this.submittted = true
     this.role.createRole(data).subscribe((result)=>{
-      console.log(result);
-      this.route.navigate(['role/all'])
-      this.submittted=false
+      if(result){
+        this.route.navigate(['role/all'])
+        
+        this.role.allRoles().subscribe((result:any) => {
+          this.store.dispatch(allRoles({ roledata: result}));
+          this.submittted=false
+          
+        });
+      }
+
+    
     })
     
   }

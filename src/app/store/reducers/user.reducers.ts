@@ -1,4 +1,4 @@
-import { myDetail, userlist, userlogin } from '../actions/user.actions';
+import { myDetail, userlist, userlogin , userloginfail, userlistfail} from '../actions/user.actions';
 import { createReducer, on } from '@ngrx/store';
 import { initialState } from './initial.state';
 
@@ -12,10 +12,24 @@ const _userReducer = createReducer(
       message: action.userdata.message
     };
   }),
+  on(userloginfail, (state, action) => {
+    return {
+      ...state,
+      isAuthenticated: action.userdata.success,
+      message: action.userdata.message
+    };
+  }),
   on(userlist, (state, action) => {
     return {
       ...state,
       userList: action.userlistdata,
+    };
+  }),
+  on(userlistfail, (state, action) => {
+    return {
+      ...state,
+      isAuthenticated: action.userlistdata.success,
+      message: action.userlistdata.message
     };
   }),
   on(myDetail, (state, action) => {

@@ -34,6 +34,12 @@ export class RoleService {
 
   }
 
+  updateRole(id:any, data:any){
+    
+    return this.http.patch(`${endPoints.UPDATE_ROLE}/${id}`, data)
+    
+  }
+
 
 
 }

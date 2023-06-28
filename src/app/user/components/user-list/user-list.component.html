@@ -1,15 +1,4 @@
 <div class="page-wrapper">
-  <div class="right-content">
-    <ngb-toast
-      *ngIf="show"
-      header="Message:-"
-      [autohide]="false"
-      (hidden)="show = false"
-    >
-      {{ message }}
-    </ngb-toast>
-  </div>
-
   <div class="wrapper container-xxl px-0">
     <div class="p-4">
       <div class="d-md-flex justify-content-md-between">
@@ -28,8 +17,7 @@
                 <thead>
                   <tr>
                     <th>User</th>
-                    <th>Country</th>
-                    <th>Email</th>
+                    <th>username</th>
                     <th>Role</th>
                     <th class="text-md-end">Action</th>
                   </tr>
@@ -43,34 +31,9 @@
                         </div>
                       </div>
                     </td>
-                    <td>Pennsylvania</td>
                     <td>{{ user.username }}</td>
                     <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn border dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          Dropdown
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li>
-                            <a class="dropdown-item" href="#">Another action</a>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                 {{user.role.roleName}}
                     </td>
                     <td class="text-md-end">
                       <button

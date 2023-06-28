@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { userlist } from 'src/app/store/actions/user.actions';
 import { UserService } from '../../providers/user.service';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -11,7 +12,6 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
  
 })
 export class UserListComponent {
-  show: boolean = false;
   message: string = '';
   userListData: any;
   submitted: boolean = false;
@@ -20,6 +20,8 @@ export class UserListComponent {
     private user: UserService,
     private store: Store,
     private route: Router,
+    private toastr: ToastrService
+
   ) {}
 
   ngOnInit() {
@@ -27,7 +29,12 @@ export class UserListComponent {
       this.store.dispatch(userlist({ userlistdata: result.users }));
 
       this.userListData = result?.users;
-    });
+    },
+    (error)=>{
+      this.toastr.error(error.error.message)
+      
+    }
+    );
   }
 
   userDetail(id: any) {
@@ -38,15 +45,25 @@ export class UserListComponent {
     this.submitted = true;
     this.user.deleteuser(id).subscribe((result) => {
       if (result) {
-        this.show = true;
         this.message = result.message;
+        this.toastr.success(this.message)
+
         this.user.userList().subscribe((result: any) => {
           this.store.dispatch(userlist({ userlistdata: result.users }));
 
           this.userListData = result?.users;
+
+          if(result?.users){
+            this.submitted = false;
+          }
+
         });
-        this.submitted = false;
+       
       }
+    },
+    (error)=>{
+      this.submitted = false;
+      this.toastr.error(error.error.message)
     });
   }
 

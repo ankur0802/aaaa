@@ -42,6 +42,10 @@ updateUser(id:string, data:any){
   return this.http.patch(`${endPoints.UPDATE_USER}/${id}`, data)
 
 }
+logout(){
+  return this.http.get(`${endPoints.LOGOUT}`)
+
+}
 
 
 }

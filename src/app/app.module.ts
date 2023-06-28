@@ -13,7 +13,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store/reducers/allReducers';
 import { SharedModule } from './shared/shared.module';
 import { RoleModule } from './role/role.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -29,6 +30,8 @@ import { RoleModule } from './role/role.module';
     SharedModule,
     NgbModule,
     FormsModule,
+    BrowserAnimationsModule,
+	ToastrModule.forRoot(),
     HttpClientModule,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
