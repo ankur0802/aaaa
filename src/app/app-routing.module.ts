@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'auth', loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)},
   {path:'user',canActivate:[AuthGuard],loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)},
   {path:'role', canActivate:[AuthGuard] , loadChildren:()=>import('./role/role.module').then(m=>m.RoleModule)},
+  {path:'kite', canActivate:[AuthGuard] , loadChildren:()=>import('./kite/kite.module').then(m=>m.KiteModule)},
   {path:'', redirectTo:'user/profile', pathMatch: 'full' },
 
 ];

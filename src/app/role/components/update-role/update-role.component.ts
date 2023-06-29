@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { permission } from 'src/app/constants/permissions/permissionconstant';
 import { permissionData, roleData } from 'src/app/data-types/dataTypes';
@@ -14,14 +14,15 @@ export class UpdateRoleComponent {
   submitted: boolean = false;
   permissions: any = permission;
   roledata: roleData | undefined;
-  permissiondata: permissionData | undefined;
+  permissiondata:any;
   rolename: any;
   isChecked: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private role: RoleService,
-    private toaster: ToastrService
+    private toaster: ToastrService,
+    private route:Router
   ) {}
 
   ngOnInit(): void {
@@ -48,6 +49,7 @@ export class UpdateRoleComponent {
       if (result) {
         this.toaster.success('Role Updated Successfully');
         this.submitted = true;
+        this.route.navigate(['role/all'])
       }
     },
     (error)=>{

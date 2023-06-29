@@ -67,7 +67,7 @@
 										</div>
 									</li>
 									<li class="nav-item dropdown">
-										<a aria-expanded="false" class="nav-link dropdown-toggle px-3 position-relative" data-bs-auto-close="outside" data-bs-toggle="dropdown" href="#" id="dropdown-profile" role="button"><img alt="user" class="w-30-p rounded-circle" src="/assets/src/media/avatar/avatar-1.jpg"> <span class="user-name ms-2 d-lg-inline-block d-none fw-semibold">Hi {{userData.name}}</span></a>
+										<a aria-expanded="false" class="nav-link dropdown-toggle px-3 position-relative" data-bs-auto-close="outside" data-bs-toggle="dropdown" href="#" id="dropdown-profile" role="button"><img alt="user" class="w-30-p rounded-circle" src="/assets/src/media/avatar/avatar-1.jpg"> <span class="user-name ms-2 d-lg-inline-block d-none fw-semibold">Hi {{userData?.name}}</span></a>
 										<div aria-labelledby="dropdown-profile" class="dropdown-menu dropdown-menu-end w-md-350-p-max w-md-350-p-min w-300-p-mx w-300-p-min p-0 overflow-hidden">
 											<ul class="ps-0 h-300-mx-i overflow-auto">
 												<li>
@@ -77,7 +77,7 @@
 																<img alt="user" class="w-70-p rounded-circle" src="/assets/src/media/avatar/avatar-1.jpg"> <i class="bg-success"></i>
 															</div>
 															<div class="d-flex flex-column">
-																<h5 class="mb-0 fw-semibold">{{userData.name}}</h5>
+																<h5 class="mb-0 fw-semibold">{{userData?.name}}</h5>
 																<p class="text-muted mt-2 mb-1">UI/UX Designer</p>
 																<p class="fs-7 mb-0">ricky.smith@gmail.com</p>
 															</div>
@@ -106,7 +106,7 @@
 														<img alt="user" class="w-40-p rounded-circle me-3" src="/assets/src/media/avatar/avatar-1.jpg">
 														<div class="w-100">
 															<div class="d-flex justify-content-between flex-grow-1">
-																<h6 class="mb-1 fw-semibold">{{userData.name}}</h6>
+																<h6 class="mb-1 fw-semibold">{{userData?.name}}</h6>
 																<p class="text-muted fs-8 mb-0">2 min ago</p>
 															</div>
 															<p class="text-muted mb-0 fs-7 text-wrap">Project status of design and development</p>

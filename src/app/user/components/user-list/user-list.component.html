@@ -37,13 +37,13 @@
                     </td>
                     <td class="text-md-end">
                       <button
-                        class="text-decoration-none me-1 btn-sm list-group-item-primary text-primary"
+                        class="btn btn-primary btn-sm me-1  "
                         (click)="userDetail(user._id)"
                       >
                         Details
                       </button>
                       <button
-                        class="text-decoration-none me-1 btn-sm list-group-item-danger text-danger"
+                        class="btn btn-danger btn-sm me-1 "
                         [disabled]="submitted"
                         (click)="userDelete(user._id)"
                       >
@@ -51,7 +51,7 @@
                       </button>
 
                       <button
-                        class="text-decoration-none btn-sm list-group-item-primary text-primary"
+                        class="btn btn-primary btn-sm  "
                         [disabled]="submitted"
                         (click)="editUser(user._id)"
                       >

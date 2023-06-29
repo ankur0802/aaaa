@@ -1,0 +1,71 @@
+<div class="page-wrapper">
+    <div class="wrapper container-xxl px-0">
+      <div class="p-4">
+        <div class="d-md-flex justify-content-md-between">
+          <h4 class="mb-lg-4 mb-2 fw-semibold">Users List</h4>
+        </div>
+        <div></div>
+        <div class="row">
+          <div class="col-md-12 col-12">
+            <div class="card">
+              <div class="card-body user_list">
+                <h5 class="card-title fw-semibold">List</h5>
+                <table
+                  class="table mb-0 text-nowrap border-start border-end"
+                  id="basic-datatable"
+                >
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>total workspaces</th>
+                      <th>Status</th>
+                      <th class="text-md-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let user of allUsers">
+                    <tr class="align-middle">
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="ms-3">
+                            <h6 class="mb-0 fw-medium">{{ user.fullName }}</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>{{user.workspaces?.length}} </td>
+                      <td>
+                        {{ user.status }}
+                      </td>
+                      <td class="text-md-end">
+                        <button
+                          class="btn btn-primary btn-sm me-1  "
+                          (click)="userDetail(user._id)"
+                        >
+                          Details
+                        </button>
+                        <button
+                          class="btn btn-danger btn-sm me-1 "
+                          [disabled]="submitted"
+                          (click)="userDelete(user._id)"
+                        >
+                          Delete
+                        </button>
+  
+                        <button
+                          class="btn btn-primary btn-sm  "
+                          [disabled]="submitted"
+                          (click)="editUser(user._id)"
+                        >
+                          Edit
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

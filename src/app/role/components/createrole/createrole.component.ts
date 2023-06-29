@@ -10,13 +10,15 @@ import { RoleService } from '../../providers/service/role.service';
   styleUrls: ['./createrole.component.scss']
 })
 export class CreateroleComponent {
-
+  loader:boolean=false
   submittted:boolean=false;
 
 constructor(private role:RoleService, private route:Router, private store:Store){}
 
 
   createRole(data:any){
+    this.loader=true
+
     this.submittted = true
     this.role.createRole(data).subscribe((result)=>{
       if(result){
@@ -25,6 +27,7 @@ constructor(private role:RoleService, private route:Router, private store:Store)
         this.role.allRoles().subscribe((result:any) => {
           this.store.dispatch(allRoles({ roledata: result}));
           this.submittted=false
+    this.loader=false
           
         });
       }

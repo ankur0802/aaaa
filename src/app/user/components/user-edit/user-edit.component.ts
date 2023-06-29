@@ -16,8 +16,8 @@ export class UserEditComponent {
   roleId: any;
   roleData: any;
   userId: string | null = '';
-  username:any;
-  userusername:any;
+  name:string='';
+  user_name:any;
   userrole:any;
 
   constructor(
@@ -40,11 +40,11 @@ export class UserEditComponent {
     this.userId = this.activatedRoute.snapshot.paramMap.get('id');
     this.user.userDetailById(this.userId).subscribe((result:any)=>{
       console.log(result.user);
-      this.username = result.user.name
-      this.userusername = result.user.username
-  console.log(this.username);
-  console.log(this.userusername);
-  
+     if(result.user){
+      this.name = result.user.name
+      this.user_name = result.user.username
+      this.userrole = result.user.role.roleName
+     }
       
     })
 
@@ -57,8 +57,8 @@ export class UserEditComponent {
 
     if(!data.name || !data.username){
       data={
-        name:this.username,
-        username:this.userusername,
+        name:this.name,
+        username:this.user_name,
         roleId:data.roleId
       }
     }

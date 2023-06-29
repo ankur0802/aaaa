@@ -16,9 +16,17 @@
               <form #updateroleform="ngForm"
               (ngSubmit)="roleUpdate(updateroleform)" class="d-flex flex-column">
                 <div class="" *ngFor="let per of permissions">
-                  <label for="roleName" class="form-label fw-medium mb-2">{{per}}</label>
+
+
+                  <div class="form-check form-switch">
+                    <label class="form-check-label form-label fw-medium mb-2" for="flexSwitchCheckChecked">{{per.title}}</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" name={{per.value}}
+                    checked [ngModel]= permissiondata[per.value] ngModel >
+                  </div>
+
+                  <!-- <label for="roleName" class="form-label fw-medium mb-2">{{per}}</label>
                   <input class="float-right align-self-end" type="checkbox" name={{per}}
-                  checked [ngModel]="false" ngModel  > 
+                  checked [ngModel]="false" ngModel  >  -->
                </div>
               
                   <div class="mt-4">
