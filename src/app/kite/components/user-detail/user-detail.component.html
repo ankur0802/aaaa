@@ -1,0 +1,776 @@
+<div class="page-wrapper">
+  <div class="wrapper container-xxl px-0">
+    <div class="p-4">
+      <div class="d-md-flex justify-content-md-between">
+        <h4 class="mb-lg-4 mb-2 fw-semibold">User Detail</h4>
+        <ol class="breadcrumb text-muted fs-7">
+          <li class="breadcrumb-item">
+            <a href="javascript:;">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="javascript:;">Users</a>
+          </li>
+          <li class="breadcrumb-item ps-2 text-muted">User Detail</li>
+        </ol>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-md-flex justify-content-between align-items-start">
+                <div class="d-md-flex align-items-center">
+                  <div class="flex-shrink-0">
+                    <div class="d-inline-block position-relative">
+                      <div class="">
+                        <img alt="contact" class="rounded-circle w-100-p" src='""'>
+                      </div>
+                      <i
+                        class="rounded-circle h-10-p w-10-p bg-success position-absolute border"
+                        style="bottom: 10px; right: 8px"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="flex-grow-1 ms-md-4 w-0-p-max mt-md-0 mt-4">
+                    <h5 class="card-title mb-1 fs-2 fw-semibold">
+                      {{ userdata?.fullName
+                      }}<span
+                        class="text-muted fs-5 fw-semibold align-middle"
+                        >{{ userdata?.email }}</span
+                      >
+                    </h5>
+                    <p class="mb-2 fw-semibold text-muted">
+                      {{ userdata?.status }}
+                    </p>
+                    <ul class="list-unstyled list-inline mt-4 mb-md-0 mb-4">
+                      <li
+                        class="list-inline-item me-md-4 me-3 mb-lg-0 mb-2 fw-semibold text-muted"
+                      >
+                        <i class="bi bi-envelope align-middle me-2"></i
+                        >{{ userdata?.email }}
+                      </li>
+                      <li
+                        class="list-inline-item me-md-4 me-3 mb-lg-0 mb-2 fw-semibold text-muted"
+                      >
+                        <i class="bi bi-telephone align-middle me-2"></i
+                        >22(35)14528
+                      </li>
+                      <li
+                        class="list-inline-item me-md-4 me-3 mb-lg-0 mb-2 fw-semibold text-muted"
+                      >
+                        <i class="bi bi-geo-alt align-middle me-2"></i
+                        >{{ userdata?.timezone }}
+                      </li>
+                      <li
+                        class="list-inline-item mb-md-0 mb-2 fw-semibold text-muted"
+                      >
+                        <i class="bi bi-translate align-middle me-2"></i
+                        >{{ userdata?.language }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-sm btn-light me-2" type="button">
+                    Follow
+                  </button>
+                  <button class="btn btn-sm btn-primary" type="button">
+                    Hire
+                  </button>
+                </div>
+              </div>
+              <div class="desc mt-5">
+                <h4 class="fw-semibold">Bio</h4>
+                <p class="m-0">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                  qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                  velit, sed quia non numquam eius modi tempora incidunt ut
+                  labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Skills</h5>
+              <span
+                class="badge bg-light mb-2 p-3 text-dark fs-7 fw-medium rounded"
+                >Photoshop</span
+              >
+              <span
+                class="badge bg-light mb-2 p-3 text-dark fs-7 fw-medium rounded"
+                >Illustrator</span
+              >
+              <span
+                class="badge bg-light mb-2 p-3 text-dark fs-7 fw-medium rounded"
+                >HTML</span
+              >
+              <span
+                class="badge bg-light mb-2 p-3 text-dark fs-7 fw-medium rounded"
+                >CSS</span
+              >
+              <span
+                class="badge bg-light mb-2 p-3 text-dark fs-7 fw-medium rounded"
+                >Figma</span
+              >
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Projects</h5>
+              <div class="h-400-p-max-md overflow-auto pt-3 pe-md-3">
+                <div class="d-flex align-items-center border-bottom pb-3">
+                  <div class="d-sm-flex w-100 align-items-center">
+                    <div>
+                      <h6 class="m-0 fw-semibold">
+                        App Design &amp; Development
+                        <span class="badge fs-8 badge-light-warning ms-2"
+                          >In Progress</span
+                        >
+                      </h6>
+                      <ul class="list-inline mt-3 mb-0">
+                        <li
+                          class="list-inline-item pe-2 fs-7 text-muted fw-normal"
+                        >
+                          <i class="bi bi-calendar-date fs-6 me-1"></i> 15 April
+                        </li>
+                        <li
+                          class="list-inline-item pe-2 fw-normal fs-7 text-muted"
+                        >
+                          <i class="bi bi-justify fs-6 me-1"></i> 40
+                        </li>
+                        <li class="list-inline-item fw-normal fs-7 text-muted">
+                          <i class="bi bi-chat-right-dots fs-6 me-1"></i> 114
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-sm ms-auto mt-sm-0 mt-3">
+                      View
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center border-bottom py-3">
+                  <div class="d-sm-flex w-100 align-items-center">
+                    <div>
+                      <h6 class="m-0 fw-semibold">
+                        New Admin Design<span
+                          class="badge fs-8 badge-light-danger ms-2"
+                          >Pending</span
+                        >
+                      </h6>
+                      <ul class="list-inline mt-3 mb-0">
+                        <li
+                          class="list-inline-item pe-2 fs-7 text-muted fw-normal"
+                        >
+                          <i class="bi bi-calendar-date fs-6 me-1"></i> 23 March
+                        </li>
+                        <li
+                          class="list-inline-item pe-2 fw-normal fs-7 text-muted"
+                        >
+                          <i class="bi bi-justify fs-6 me-1"></i> 67
+                        </li>
+                        <li class="list-inline-item fw-normal fs-7 text-muted">
+                          <i class="bi bi-chat-right-dots fs-6 me-1"></i> 100
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-sm ms-auto mt-sm-0 mt-3">
+                      View
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center border-bottom py-3">
+                  <div class="d-sm-flex w-100 align-items-center">
+                    <div>
+                      <h6 class="m-0 fw-semibold">
+                        UI/UX Design<span
+                          class="badge fs-8 badge-light-success ms-2"
+                          >Completed</span
+                        >
+                      </h6>
+                      <ul class="list-inline mt-3 mb-0">
+                        <li
+                          class="list-inline-item pe-2 fs-7 text-muted fw-normal"
+                        >
+                          <i class="bi bi-calendar-date fs-6 me-1"></i> 10 March
+                        </li>
+                        <li
+                          class="list-inline-item pe-2 fw-normal fs-7 text-muted"
+                        >
+                          <i class="bi bi-justify fs-6 me-1"></i> 55
+                        </li>
+                        <li class="list-inline-item fw-normal fs-7 text-muted">
+                          <i class="bi bi-chat-right-dots fs-6 me-1"></i> 120
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-sm ms-auto mt-sm-0 mt-3">
+                      View
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center border-bottom py-3">
+                  <div class="d-sm-flex w-100 align-items-center">
+                    <div>
+                      <h6 class="m-0 fw-semibold">
+                        PHP Development<span
+                          class="badge fs-8 badge-light-success ms-2"
+                          >Completed</span
+                        >
+                      </h6>
+                      <ul class="list-inline mt-3 mb-0">
+                        <li
+                          class="list-inline-item pe-2 fs-7 text-muted fw-normal"
+                        >
+                          <i class="bi bi-calendar-date fs-6 me-1"></i> 15 Dec
+                        </li>
+                        <li
+                          class="list-inline-item pe-2 fw-normal fs-7 text-muted"
+                        >
+                          <i class="bi bi-justify fs-6 me-1"></i> 78
+                        </li>
+                        <li class="list-inline-item fw-normal fs-7 text-muted">
+                          <i class="bi bi-chat-right-dots fs-6 me-1"></i> 214
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-sm ms-auto mt-sm-0 mt-3">
+                      View
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center pt-3">
+                  <div class="d-sm-flex w-100 align-items-center">
+                    <div>
+                      <h6 class="m-0 fw-semibold">
+                        SEO Implementation<span
+                          class="badge fs-8 badge-light-warning ms-2"
+                          >In Progress</span
+                        >
+                      </h6>
+                      <ul class="list-inline mt-3 mb-0">
+                        <li
+                          class="list-inline-item pe-2 fs-7 text-muted fw-normal"
+                        >
+                          <i class="bi bi-calendar-date fs-6 me-1"></i> 10 Dec
+                        </li>
+                        <li
+                          class="list-inline-item pe-2 fw-normal fs-7 text-muted"
+                        >
+                          <i class="bi bi-justify fs-6 me-1"></i> 45
+                        </li>
+                        <li class="list-inline-item fw-normal fs-7 text-muted">
+                          <i class="bi bi-chat-right-dots fs-6 me-1"></i> 114
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="btn btn-primary btn-sm ms-auto mt-sm-0 mt-3">
+                      View
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Tasks</h5>
+              <ul
+                class="nav nav nav-tabs mb-2"
+                id="tasks-contact"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    aria-controls="open-tasks"
+                    aria-selected="true"
+                    class="nav-link active"
+                    data-bs-target="#open-tasks-contact"
+                    data-bs-toggle="pill"
+                    id="open-tasks"
+                    role="tab"
+                    type="button"
+                  >
+                    Open Tasks
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    aria-controls="closed-tasks"
+                    aria-selected="false"
+                    class="nav-link"
+                    data-bs-target="#closed-tasks-contact"
+                    data-bs-toggle="pill"
+                    id="closed-tasks"
+                    role="tab"
+                    type="button"
+                  >
+                    Closed Tasks
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content pt-3" id="tasks-contactContent">
+                <div
+                  aria-labelledby="open-tasks"
+                  class="tab-pane fade show active"
+                  id="open-tasks-contact"
+                  role="tabpanel"
+                >
+                  <div class="list-group h-400-p-max-md overflow-auto">
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Email</p>
+                        <p class="mb-0">Send over projects documents</p>
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Elen Cruz<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 12 Mar, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          checked
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-danger mb-1 h6">
+                          Document overdue 14 days
+                        </p>
+                        <p class="mb-0">
+                          Write down the meeting agenda so we could prepare for
+                          the weekly setup
+                        </p>
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Lucy Anthony<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 5 Apr, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Document</p>
+                        <p class="mb-0">Prepare for the weekly setup</p>
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Nomen Nescio<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 24 Mar, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Meeting</p>
+                        <p class="mb-0">
+                          New order needs to be placed after meeting plan
+                        </p>
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Simon Sais<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 16 Apr, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Meeting</p>
+                        <p class="mb-0">Member has sent a request</p>
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Gene Eva<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 12 Apr, 2022
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  aria-labelledby="closed-tasks"
+                  class="tab-pane fade"
+                  id="closed-tasks-contact"
+                  role="tabpanel"
+                >
+                  <div class="list-group h-400-p-max-md overflow-auto">
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          checked
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Document</p>
+                        <del class="text-muted"
+                          >Send over projects documents</del
+                        >
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Elen Cruz<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 12 Mar, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          checked
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Meeting</p>
+                        <del class="text-muted">Member has sent a request</del>
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Gene Eva<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 12 Apr, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          checked
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Document</p>
+                        <del class="text-muted"
+                          >System deployment has been completed</del
+                        >
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Nomen Nescio<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 5 Apr, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          checked
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Document</p>
+                        <del class="text-muted"
+                          >Database backup has been completed</del
+                        >
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Lucy Anthony<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 24 Mar, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div class="w-100 mb-4 d-flex align-items-start">
+                      <label class="list-group-item p-0 border-0 me-2"
+                        ><input
+                          checked
+                          class="form-check-input w-15-p-max h-15-p-max"
+                          type="checkbox"
+                      /></label>
+                      <div>
+                        <p class="text-muted mb-1 h6">Meeting</p>
+                        <del class="text-muted"
+                          >New order needs to be placed after meeting plan</del
+                        >
+                        <p class="text-muted fs-8 m-0">
+                          Assigned to Simon Sais<span class="mx-2"
+                            ><i
+                              class="bi bi-circle-fill fs-10 align-middle text-muted"
+                            ></i
+                          ></span>
+                          Added 16 Apr, 2022
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Activity Timeline</h5>
+              <div
+                class="timeline-wrapper h-400-p-max overflow-auto pt-3 pe-md-3"
+              >
+                <div class="month-one mb-5">
+                  <h6 class="mb-4">January 2022</h6>
+                  <ul class="tree-view h-auto">
+                    <li class="ps-5 position-relative">
+                      <span
+                        class="tree-view-point tree-view-point-primary"
+                      ></span>
+                      <div class="mb-5">
+                        <div class="mb-1 d-xl-flex justify-content-between">
+                          <h6 class="mb-0 fw-semibold">Task Added</h6>
+                          <span class="text-muted">12 min ago</span>
+                        </div>
+                        <p class="mb-0 text-muted fs-6">
+                          Prepare for weekly meeting to discuss new features
+                        </p>
+                      </div>
+                    </li>
+                    <li class="ps-5 position-relative">
+                      <span
+                        class="tree-view-point tree-view-point-warning"
+                      ></span>
+                      <div class="mb-5">
+                        <div class="mb-1 d-xl-flex justify-content-between">
+                          <h6 class="mb-0 fw-semibold">Deal Added</h6>
+                          <span class="text-muted">21 Jan</span>
+                        </div>
+                        <p class="mb-0 text-muted fs-6">
+                          Deal for the Real Estate project
+                        </p>
+                      </div>
+                    </li>
+                    <li class="ps-5 position-relative">
+                      <span class="tree-view-point tree-view-point-info"></span>
+                      <div>
+                        <div class="mb-1 d-xl-flex justify-content-between">
+                          <h6 class="mb-0 fw-semibold">Event Completed</h6>
+                          <span class="text-muted">26 Jan</span>
+                        </div>
+                        <p class="mb-0 text-muted fs-6">
+                          Meet with Claudia for brunch
+                        </p>
+                      </div>
+                    </li>
+                    <li class="tree-view-check position-relative">
+                      <span class="tree-view-point bg-transparent"
+                        ><i class="bi bi-check-circle-fill text-muted fs-6"></i
+                      ></span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="month-two">
+                  <h6 class="mb-4">February 2022</h6>
+                  <ul class="tree-view h-auto">
+                    <li class="ps-5 position-relative">
+                      <span
+                        class="tree-view-point tree-view-point-primary"
+                      ></span>
+                      <div class="mb-5">
+                        <div class="mb-1 d-xl-flex justify-content-between">
+                          <h6 class="mb-0 fw-semibold">Task Added</h6>
+                          <span class="text-muted">12 Feb</span>
+                        </div>
+                        <p class="mb-0 text-muted fs-6">
+                          Prepare for weekly meeting to discuss new features
+                        </p>
+                      </div>
+                    </li>
+                    <li class="ps-5 position-relative">
+                      <span
+                        class="tree-view-point tree-view-point-warning"
+                      ></span>
+                      <div class="mb-5">
+                        <div class="mb-1 d-xl-flex justify-content-between">
+                          <h6 class="mb-0 fw-semibold">Deal Added</h6>
+                          <span class="text-muted">20 Feb</span>
+                        </div>
+                        <p class="mb-0 text-muted fs-6">
+                          Deal for the Real Estate project
+                        </p>
+                      </div>
+                    </li>
+                    <li class="ps-5 position-relative">
+                      <span class="tree-view-point tree-view-point-info"></span>
+                      <div class="">
+                        <div class="mb-1 d-xl-flex justify-content-between">
+                          <h6 class="mb-0 fw-semibold">Event Completed</h6>
+                          <span class="text-muted">25 Feb</span>
+                        </div>
+                        <p class="mb-0 text-muted fs-6">
+                          Meet with Claudia for brunch
+                        </p>
+                      </div>
+                    </li>
+                    <li class="tree-view-check position-relative">
+                      <span class="tree-view-point bg-transparent"
+                        ><i class="bi bi-check-circle-fill text-muted fs-6"></i
+                      ></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Notes</h5>
+              <div
+                class="notify w-100 h-500-p-max overflow-auto pe-md-3 mt-3 pt-3"
+              >
+                <div
+                  class="notify-content pb-4 d-inline-block w-100 border-bottom"
+                >
+                  <span class="badge fw-normal list-group-item-info mb-2"
+                    >New</span
+                  >
+                  <div
+                    class="title d-md-flex align-items-start justify-content-between mb-2"
+                  >
+                    <h6 class="lh-base mb-0">
+                      Sed ut perspiciatis unde omnis iste natus
+                    </h6>
+                    <span class="text-muted ms-sm-auto text-nowrap"
+                      >12 min</span
+                    >
+                  </div>
+                  <p class="m-sm-0 text-muted">
+                    Quisque rutrum aenean imperdiet ultricies nisi vel augue.
+                    Curabitur ullam corper ultricies nisi nam eget dui etiam
+                    rhoncus.
+                  </p>
+                </div>
+                <div
+                  class="notify-content py-4 d-inline-block w-100 border-bottom"
+                >
+                  <span class="badge fw-normal list-group-item-warning mb-2"
+                    >Pending</span
+                  >
+                  <div
+                    class="title d-md-flex align-items-start justify-content-between mb-2"
+                  >
+                    <h6 class="lh-base mb-0">
+                      Quisquam est qui dolorem ipsum quia dolor sit amet nihil
+                      molestiae
+                    </h6>
+                    <span class="text-muted ms-sm-auto text-nowrap">1 hr</span>
+                  </div>
+                  <p class="m-sm-0 text-muted">
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                    consequatur.
+                  </p>
+                </div>
+                <div
+                  class="notify-content py-4 d-inline-block w-100 border-bottom"
+                >
+                  <span class="badge fw-normal list-group-item-success mb-2"
+                    >Completed</span
+                  >
+                  <div
+                    class="title d-md-flex align-items-start justify-content-between mb-2"
+                  >
+                    <h6 class="lh-base mb-0">
+                      Quis autem vel eum iure reprehenderit qui in ea voluptate
+                      ipsum
+                    </h6>
+                    <span class="text-muted ms-sm-auto text-nowrap">3 hr</span>
+                  </div>
+                  <p class="m-sm-0 text-muted">
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                    consequatur.
+                  </p>
+                </div>
+                <div
+                  class="notify-content py-4 d-inline-block w-100 border-bottom"
+                >
+                  <span class="badge fw-normal list-group-item-info mb-2"
+                    >New</span
+                  >
+                  <div
+                    class="title d-md-flex align-items-start justify-content-between mb-2"
+                  >
+                    <h6 class="lh-base mb-0">
+                      Sed ut perspiciatis unde omnis iste natus
+                    </h6>
+                    <span class="text-muted ms-sm-auto text-nowrap"
+                      >30 min</span
+                    >
+                  </div>
+                  <p class="m-sm-0 text-muted">
+                    Quisque rutrum aenean imperdiet ultricies nisi vel augue.
+                    Curabitur ullam corper ultricies nisi nam eget dui etiam
+                    rhoncus.
+                  </p>
+                </div>
+                <div class="notify-content pt-4 d-inline-block w-100">
+                  <span class="badge fw-normal list-group-item-warning mb-2"
+                    >Pending</span
+                  >
+                  <div
+                    class="title d-md-flex align-items-start justify-content-between mb-2"
+                  >
+                    <h6 class="lh-base mb-0">
+                      Quisquam est qui dolorem ipsum quia dolor sit met nihil
+                      molestiae
+                    </h6>
+                    <span class="text-muted ms-sm-auto text-nowrap">2 hr</span>
+                  </div>
+                  <p class="m-sm-0 text-muted">
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                    corporis suscipit laboriosam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

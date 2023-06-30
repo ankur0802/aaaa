@@ -12,8 +12,7 @@ const _roleReducer = createReducer(
       
     };
   }),
- 
- 
+
 );
 
 export function roleReducer(state:any, action:any) {

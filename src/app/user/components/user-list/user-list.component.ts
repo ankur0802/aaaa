@@ -32,7 +32,7 @@ export class UserListComponent {
     },
     (error)=>{
       this.toastr.error(error.error.message)
-      
+      this.route.navigate(['user/profile'])
     }
     );
   }

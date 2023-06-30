@@ -32,14 +32,14 @@ export class UserEditComponent {
       .subscribe((result: any) => {
         this.roleData = result.role.data;
      
-        console.log(this.roleData);
+        console.log(result);
       });
   }
 
   ngOnInit(){
     this.userId = this.activatedRoute.snapshot.paramMap.get('id');
     this.user.userDetailById(this.userId).subscribe((result:any)=>{
-      console.log(result.user);
+      // console.log(result.user);
      if(result.user){
       this.name = result.user.name
       this.user_name = result.user.username
@@ -53,7 +53,7 @@ export class UserEditComponent {
   userUpdate(userupdateform: any) {
     let data = userupdateform.value;
     this.userId = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(data);
+    // console.log(data);
 
     if(!data.name || !data.username){
       data={
@@ -65,7 +65,7 @@ export class UserEditComponent {
     
     if (this.userId) {
       this.user.updateUser(this.userId, data).subscribe((result) => {
-        console.log(result);
+        // console.log(result);
         this.toaster.success('user Updated successfully')
         userupdateform.resetForm();
 

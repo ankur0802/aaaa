@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import axios from 'axios';
+import { ToastrService } from 'ngx-toastr';
+import { userData } from 'src/app/store/actions/kiteuser.actions';
 import { KiteService } from '../../providers/services/kite.service';
 
 @Component({
@@ -10,8 +14,9 @@ import { KiteService } from '../../providers/services/kite.service';
 export class UsersComponent {
   allUsers:any;
   submitted:boolean=false
+  userdata:object={}
 
-  constructor(private kite:KiteService){}
+  constructor(private kite:KiteService, private route:Router, private store:Store, private toaster:ToastrService){}
 
 
   ngOnInit(){
@@ -21,13 +26,28 @@ export class UsersComponent {
       
     })
     .catch((error)=>{
-      console.log(error);
-      
+      this.toaster.error(error.error.message)
+       
     })
   }
 
 
-  userDetail(id:any){
+  userDetail(id:any, name:any){
+    console.log(id);
+if(this.allUsers){
+  let userDetail = this.allUsers.map((data:any)=>{
+    // console.log(data);
+    if(data._id == id){
+      this.userdata = data
+      return data
+    }
+    
+    })
+    
+  }
+  this.store.dispatch(userData(({userdata:this.userdata})))
+
+    this.route.navigate([`kite/user/${id}`])
     
   }
   userDelete(id:any){

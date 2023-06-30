@@ -34,9 +34,4 @@ export class ProfileComponent {
     })
    
   }
-
-
-
-
-
 }

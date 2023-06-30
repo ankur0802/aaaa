@@ -30,29 +30,34 @@ export class UpdateRoleComponent {
     console.log(roleId);
     if (roleId) {
       this.role.getRole(roleId).subscribe((result: any) => {
-        console.log(result);
         this.rolename = result.role[0].roleName;
         this.permissiondata = result.role[0].permission;
         console.log(this.permissiondata);
-      });
+      },
+      (error)=>{
+        
+        this.toaster.error(error.error.message)
+        this.route.navigate(['user/profile'])
+      }
+      );
     }
   }
 
   roleUpdate(updateroleform: any) {
-    this.submitted = false;
+    this.submitted = true;
     const roleId = this.activatedRoute.snapshot.paramMap.get('id');
 
     let data = updateroleform.value;
-    console.log(data);
     this.role.updateRole(roleId, data).subscribe((result) => {
-      console.log(result);
       if (result) {
         this.toaster.success('Role Updated Successfully');
-        this.submitted = true;
+        this.submitted = false;
         this.route.navigate(['role/all'])
       }
     },
     (error)=>{
+      this.submitted = false;
+
       this.toaster.error(error.error.message)
     }
     );

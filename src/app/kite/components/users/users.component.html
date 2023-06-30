@@ -9,7 +9,6 @@
           <div class="col-md-12 col-12">
             <div class="card">
               <div class="card-body user_list">
-                <h5 class="card-title fw-semibold">List</h5>
                 <table
                   class="table mb-0 text-nowrap border-start border-end"
                   id="basic-datatable"
@@ -22,7 +21,7 @@
                       <th class="text-md-end">Action</th>
                     </tr>
                   </thead>
-                  <tbody *ngFor="let user of allUsers">
+                  <tbody *ngFor="let user of allUsers ">
                     <tr class="align-middle">
                       <td>
                         <div class="d-flex align-items-center">
@@ -38,7 +37,7 @@
                       <td class="text-md-end">
                         <button
                           class="btn btn-primary btn-sm me-1  "
-                          (click)="userDetail(user._id)"
+                          (click)="userDetail(user._id, user.fullName)"
                         >
                           Details
                         </button>
