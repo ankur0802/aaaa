@@ -1,0 +1,57 @@
+ 
+ <ng-container *ngIf="loader; else thisshow">
+   <div class="page-wrapper">
+     <div class="wrapper container-xxl px-0">
+       <div class="p-4">
+ 
+ 
+         <div class="d-flex justify-content-center">
+           <div class="spinner-border" role="status">
+             <span class="visually-hidden">Loading...</span>
+           </div>
+         </div>
+ 
+ 
+       </div>
+     </div>
+   </div>
+ </ng-container>
+ 
+ <ng-template #thisshow>
+   <main class="w-100 flex-wrap">
+      <div class="container-fluid h-md-100">
+         <div class="row h-md-100">
+            <div class="col-12 p-0">
+               <div class=" bg-white  d-flex justify-content-center align-items-center h-md-100 p-0">
+                  <div class="logo position-absolute top-0 z-index-9">
+                     <a href="#" class="text-dark text-decoration-none  w-100 p-3 d-inline-block"> <span class="fs-5 fw-bolder letter-spacing-2">CMP</span> </a>
+                  </div>
+                  <div class="outer-form position-relative d-md-flex align-items-center h-md-100">
+                     <div class="col-md-7 col-12 position-relative d-flex justify-content-between h-md-100">
+                        <div class="w-300-p-min form-main position-relative d-flex align-items-center justify-content-center p-lg-0 p-md-4 mt-4 p-5 mx-auto">
+                           <div class="login-wrap position-relative w-100">
+                              <h4 class="mb-2 fs-4 text-md-start text-center fw-semibold">Create Role</h4>
+                              <form #createroleform="ngForm" (ngSubmit)="createRole(createroleform.value)" class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4">
+                                 <div class="form-group mb-4 gradient-border position-relative">
+                                    <label for="roleName" class="form-label fw-medium mb-2">Enter Role Name</label>
+                                    <input class="form-control form-control-solid" type="text" id="role" placeholder="Enter RoleName" aria-label="full name" ngModel #roleName="ngModel" name="roleName" required 
+                                    minlength="3"   pattern="^[a-z0-9_-]{3,15}$" ngModel  > 
+                                 </div>
+                                 <p class="text-danger"><span *ngIf="roleName.invalid && roleName.touched" >Please enter valid roleName</span></p>
+                                 <div class="mt-4">
+                                    <button class="btn btn-primary w-100" [disabled]=" submittted || createroleform.invalid" >Create Role</button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+    
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+  
+ </ng-template>
+ 

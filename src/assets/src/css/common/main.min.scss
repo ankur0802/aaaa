@@ -16705,7 +16705,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 265px;
-  min-height: 100vh;
+  // min-height: 100vh;
   transition: margin 0.1s ease, width 0.1s ease;
   width: calc(100% - 265px);
 }
@@ -17062,7 +17062,7 @@ ul:hover::-webkit-scrollbar-thumb {
   transform: translate3d(-209px, 24px, 0px);
 }
 .wrapper {
-  padding-top: 66px;
+  // padding-top: 66px;
 }
 ol,
 ul {

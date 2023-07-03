@@ -1,0 +1,89 @@
+<main class="w-100 flex-wrap">
+  <div class="container-fluid h-md-100">
+    <div class="row h-md-100">
+      <div class="col-12 p-0">
+        <div
+          class="bg-white d-flex justify-content-center align-items-center h-md-100 p-0"
+        >
+          <div class="logo position-absolute top-0 z-index-9">
+            <a
+              href="#"
+              class="text-dark text-decoration-none w-100 p-3 d-inline-block"
+            >
+              <span class="fs-5 fw-bolder letter-spacing-2">CMP</span>
+            </a>
+          </div>
+          <div
+            class="outer-form position-relative d-md-flex align-items-center h-md-100"
+          >
+            <div
+              class="col-md-7 col-12 position-relative d-flex justify-content-between h-md-100"
+            >
+              <div
+                class="w-300-p-min form-main position-relative d-flex align-items-center justify-content-center p-lg-0 p-md-4 mt-4 p-5 mx-auto"
+              >
+                <div class="login-wrap position-relative w-100">
+                  <h4 class="mb-2 fs-4 text-md-start text-center fw-semibold">
+                    User Details To Update
+                  </h4>
+                  <form
+                    #userupdateform="ngForm"
+                    (ngSubmit)="userUpdate(userupdateform)"
+                    class="signin-form mt-md-5 mt-4 mb-lg-5 mb-4"
+                  >
+
+
+                    <div
+                      class="form-group mb-4 gradient-border position-relative"
+                    >
+                      <label for="username" class="form-label fw-medium mb-2"
+                        >Enter Username</label
+                      >
+                      <input
+                        class="form-control form-control-solid"
+                        type="text"
+                        id="username"
+                        placeholder="Enter Username"
+                        aria-label="full name"
+                        ngModel
+                        required
+                        value={{user_name}}
+                        #username="ngModel"
+                        name="username"
+                        disabled
+                      />
+                    </div>
+   
+                    <div
+                      class="form-group mb-4 gradient-border position-relative"
+                    >
+                      <label
+                        for="confirmpassword"
+                        class="form-label fw-medium mb-2"
+                        >Enter Role</label
+                      >
+                      <select name="roleId" [(ngModel)]="roleId" class="form-select " aria-label="Default select example" >
+                        
+                        <option class="border p-3"  *ngFor="let rol of roleData" [value]='rol._id' [selected]="rol.roleName === userrole">{{rol.roleName}}</option>
+                
+                      </select> 
+                    </div>
+
+                    <div class="mt-4">
+                      <button
+                        class="btn btn-primary w-100"
+                        [disabled]="submitted"
+                      >
+                        Update User
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
