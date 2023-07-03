@@ -48,7 +48,7 @@ export class UpdateRoleComponent {
     const roleId = this.activatedRoute.snapshot.paramMap.get('id');
 
     let data = updateroleform.value;
-    this.role.updateRole(roleId, data).subscribe((result) => {
+    this.role.updateRole(roleId, data).subscribe((result:any) => {
       if (result) {
         this.toaster.success('Role Updated Successfully');
         this.submitted = false;

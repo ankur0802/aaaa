@@ -22,7 +22,7 @@
                   <div class="flex-shrink-0">
                     <div class="d-inline-block position-relative">
                       <div class="">
-                        <img alt="contact" class="rounded-circle w-100-p" src='""'>
+                        <img alt="contact" class="rounded-circle w-100-p" src='https://cooperapp.s3.ap-south-1.amazonaws.com/{{userdata?.avatar?.folder}}64/{{userdata?.avatar?.key}}'>
                       </div>
                       <i
                         class="rounded-circle h-10-p w-10-p bg-success position-absolute border"
@@ -35,11 +35,11 @@
                       {{ userdata?.fullName
                       }}<span
                         class="text-muted fs-5 fw-semibold align-middle"
-                        >{{ userdata?.email }}</span
+                        >{{ userdata?.status }}</span
                       >
                     </h5>
                     <p class="mb-2 fw-semibold text-muted">
-                      {{ userdata?.status }}
+                      Total Workspace :- {{ userdata?.workspaces.length }}
                     </p>
                     <ul class="list-unstyled list-inline mt-4 mb-md-0 mb-4">
                       <li
