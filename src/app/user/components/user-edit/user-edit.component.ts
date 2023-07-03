@@ -70,13 +70,13 @@ export class UserEditComponent {
         userupdateform.resetForm();
 
         this.user.userList().subscribe((result: any) => {
-          this.store.dispatch(userlist({ userlistdata: result.users }));
+          this.store.dispatch(userlist({ userlistdata: result?.users }));
     
         }),
         this.route.navigate(['user/user-list'])
       },
       (error)=>{
-        this.toaster.error(error.error.message)
+        this.toaster.error(error?.error?.message)
 
       }
       );

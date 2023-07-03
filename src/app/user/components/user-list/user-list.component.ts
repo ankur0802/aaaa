@@ -45,11 +45,11 @@ export class UserListComponent {
     this.submitted = true;
     this.user.deleteuser(id).subscribe((result) => {
       if (result) {
-        this.message = result.message;
+        this.message = result?.message;
         this.toastr.success(this.message)
 
         this.user.userList().subscribe((result: any) => {
-          this.store.dispatch(userlist({ userlistdata: result.users }));
+          this.store.dispatch(userlist({ userlistdata: result?.users }));
 
           this.userListData = result?.users;
 
@@ -63,7 +63,7 @@ export class UserListComponent {
     },
     (error)=>{
       this.submitted = false;
-      this.toastr.error(error.error.message)
+      this.toastr.error(error?.error?.message)
     });
   }
 

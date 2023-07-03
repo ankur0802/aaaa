@@ -19,7 +19,7 @@ export class UserDetailComponent {
     
     this.user.userDetailById(userId).subscribe((result:any)=>{
 
-      this.userData = result.user
+      this.userData = result?.user
       
     })
 

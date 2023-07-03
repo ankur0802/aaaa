@@ -43,7 +43,7 @@ export class CreateComponent {
       this.submitted=false
       createaccform.resetForm()
 
-      this.toaster.error(error.error.message)
+      this.toaster.error(error?.error?.message)
     }
     );
   }

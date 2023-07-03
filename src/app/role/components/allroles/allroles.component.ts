@@ -64,20 +64,20 @@ export class AllrolesComponent {
       (result: any) => {
         this.role.allRoles().subscribe((result: any) => {
           this.store.dispatch(allRoles({ roledata: result }));
-          this.roleListData = result.role;
+          this.roleListData = result?.role;
 
           if (result) {
             this.submitted = false;
             this.loader = false;
           }
         });
-        this.toastr.success(result.message);
+        this.toastr.success(result?.message);
       },
       (error) => {
         this.submitted = false;
         this.loader = false;
 
-        this.toastr.error(error.error.message);
+        this.toastr.error(error?.error?.message);
       }
     );
   }

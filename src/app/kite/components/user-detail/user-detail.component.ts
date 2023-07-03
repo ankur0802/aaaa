@@ -51,7 +51,7 @@ export class UserDetailComponent {
         this.store.dispatch(userData({ userdata: this.userdata }));
       })
       .catch((error) => {
-        this.toaster.error(error.error.message);
+        this.toaster.error(error?.error?.message);
       });
   }
 }

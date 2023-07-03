@@ -45,9 +45,9 @@ export class LoginComponent {
     (error)=>{
 
       console.log(error);
-      this.toastr.error(error.error.message)
+      this.toastr.error(error?.error?.message)
 
-      this.store.dispatch(userloginfail({ userdata: error.error }));
+      this.store.dispatch(userloginfail({ userdata: error?.error }));
     }
     );
 

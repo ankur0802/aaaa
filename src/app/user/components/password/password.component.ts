@@ -37,7 +37,7 @@ this.route.navigate(['user/profile'])
       
     },
     (error)=>{
-      this.toaster.error(error.error.message)
+      this.toaster.error(error?.error?.message)
     this.submitted=false
 
     }

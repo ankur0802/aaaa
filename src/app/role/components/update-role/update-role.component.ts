@@ -36,7 +36,7 @@ export class UpdateRoleComponent {
       },
       (error)=>{
         
-        this.toaster.error(error.error.message)
+        this.toaster.error(error?.error?.message)
         this.route.navigate(['user/profile'])
       }
       );
@@ -58,7 +58,7 @@ export class UpdateRoleComponent {
     (error)=>{
       this.submitted = false;
 
-      this.toaster.error(error.error.message)
+      this.toaster.error(error?.error?.message)
     }
     );
 
